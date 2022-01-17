@@ -1,7 +1,8 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     {% block meta %}
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -13,36 +14,217 @@
     {% endblock %}
 
     {% block corecss %}
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Roboto+Condensed:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
+    <script src="https://kit.fontawesome.com/3f3f9142b7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- jQuery, Popper and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+
     {% endblock %}
 
     {% block extra_js %}
     {% endblock %}
 
     <title>Stay Go Campervan Hire {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
+</head>
+
+<body>
+    <!-------------Navbar------------->
+    <nav class="navbar navbar-dark bg-origin-studio fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand staygo-logo" href="#"><img class="staygo-logo-img"
+                    src="media/staygocampervanhire.png">
+                <div class="row"></div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon" id="sg-nav-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">OUR VANS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">BOOKING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">FAQS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">CONTACT US</a>
+                        </li>
+                    </ul>
+                    <!---Search box
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          --->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 stay-background">
+                <div class="container banner-logo">
+                    <div class="row">
+                        <div class="col-12" id="banner-logo-right">
+                            <img id="banner-logo-focus" src="media/STAYGOlogo-02.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 go-background">
+                <div class="container banner-logo">
+                    <div class="row">
+                        <div class="col-12" id="banner-logo-left">
+                            <img id="banner-logo-fade" src="media/STAYGOlogo-03.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="container-fluid fixed-top"></header>
     {% if messages %}
-        <div class="message-container"></div>
+    <div class="message-container"></div>
     {% endif %}
-    <h1>Hello, world!</h1>
+
+    <div class="container sg-container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Why hire a van through StayGo?</h1>
+            </div>
+            <div class="col-3 sg-icon-blocks">
+                <i class="fas fa-bed sg-icons"></i>
+                <p class="sg-icon-text">Lorem ipsum dolor sit amet, consectetur </p>
+            </div>
+            <div class="col-3 sg-icon-blocks">
+                <i class="fas fa-bed sg-icons"></i>
+                <p class="sg-icon-text">Lorem ipsum dolor sit amet, consectetur </p>
+            </div>
+            <div class="col-3 sg-icon-blocks">
+                <i class="fas fa-bed sg-icons"></i>
+                <p class="sg-icon-text">Lorem ipsum dolor sit amet, consectetur </p>
+            </div>
+            <div class="col-3 sg-icon-blocks">
+                <i class="fas fa-bed sg-icons"></i>
+                <p class="sg-icon-text">Lorem ipsum dolor sit amet, consectetur </p>
+            </div>
+        </div>
+    </div>
+    <div class="container sg-container">
+        <div class="row">
+            <div class="col-12">
+                <h2>What customers say</h2>
+            </div>
+            <!---Testimonial 1-->
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-3">
+                        <img class="testimonial-img" src="media/testimonial1.png">
+                    </div>
+                    <div class="col-9 center">
+                        We had an excellent trip away travelling in iris! She’s a lovely van, very well kept, with all
+                        you need for your trip! Oakley was fantastic, lovely guy and always available to help and answer
+                        questions at any point! Will certainly be using again!!
+                        <div class="row">
+                            <div class="col-12 sg-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <div class="col-12 center">
+                                Read more
+                            </div>
+                            <div class="col-12 sg-down">
+                                <i class="fas fa-angle-double-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---Testimonial 1-->
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-3">
+                        <img class="testimonial-img" src="media/testimonial1.png">
+                    </div>
+                    <div class="col-9 center">
+                        We had an excellent trip away travelling in iris! She’s a lovely van, very well kept, with all
+                        you need for your trip! Oakley was fantastic, lovely guy and always available to help and answer
+                        questions at any point! Will certainly be using again!!
+                        <div class="row">
+                            <div class="col-12 sg-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <div class="col-12 center">
+                                Read more
+                            </div>
+                            <div class="col-12 sg-down">
+                                <i class="fas fa-angle-double-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     {% block page_header %}
     {% endblock %}
 
     {% block content %}
     {% endblock %}
 
-  </body>
+    <footer>
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <h4 class="white">We accept all major credit cards</h4>
+            </div>
+            <div class="col-12 col-md-4">
+                <h4 class="white">Connect with us</h4>
+                <p><a href="https://www.instagram.com/jade_elpis/" class="footer-icon"><i
+                            class="fab fa-instagram"></i></a><a href="https://www.facebook.com/jade.s.carvalho"
+                        class="footer-icon"><i class="fab fa-facebook-square"></i></a><a
+                        href="https://twitter.com/Cyber_Safe_Biz" class="footer-icon"><i class="fab fa-youtube"></i></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
 </html>
