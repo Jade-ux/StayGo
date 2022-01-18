@@ -100,9 +100,11 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid container-banner-home">
         <div class="row">
             <div class="col-6 stay-background">
+                <img src="/media/home-stay1.png" class="staySlides" style="max-width:100%" alt="">
+                <img src="/media/home-stay2.png" class="staySlides" style="max-width:100%;" alt="">
                 <div class="container banner-logo">
                     <div class="row">
                         <div class="col-12" id="banner-logo-right">
@@ -112,6 +114,8 @@
                 </div>
             </div>
             <div class="col-6 go-background">
+                <img src="/media/home-go.png" class="goSlides" style="max-width:100%;" alt="">
+                <img src="/media/home-go2.png" class="goSlides" style="max-width:100%;" alt="">
                 <div class="container banner-logo">
                     <div class="row">
                         <div class="col-12" id="banner-logo-left">
@@ -209,6 +213,7 @@
 
     {% block content %}
     {% endblock %}
+    <script src="{% static '/js/base.js' %}"></script>
 
     <footer>
         <div class="row">

@@ -96,17 +96,33 @@
 
   /*-------------------------------------------------------------Banners*/
 
-.stay-background {
-    background: url('/media/home-stay.png') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    padding-right: 0;
+.container-banner-home {
+  padding-right: 0;
 }
-.go-background {
-    background: url('/media/home-go.png') no-repeat center center fixed;
+
+.stay-background {
+    /*background: url('/media/home-stay.png') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
-    padding-left: 0;
+    height: calc(100vh - 164px);*/
+    padding: 0;
+    margin: 0;
+    margin-bottom: -100px;
+}
+
+.go-background {
+    /*.background: url('/media/home-go.png') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);*/
+    padding: 0;
+    margin: 0;
+    margin-bottom: -100px;
+}
+
+.goSlides {
+  position: relative;
+  z-index: -1;
+  max-width: 110%;
+  margin-left: -13px;
 }
 
 .banner-logo {
@@ -117,47 +133,50 @@
 
 #banner-logo-focus {
     max-width: 26rem;
-    top: calc(100vh - 410px);
+    top: calc(100vh - 1715px);
     position: relative;
+    right: 20px;
 }
 
 #banner-logo-focus {
   /*The animation code starts below*/
-  animation-name: stay-zoom;
-  animation-duration: 5s;
-  /*below tells the browser what to do with the image after the animation - forwards will retain the state of the image at the last keyframe (the end of the animation)*/
-  animation-fill-mode: forwards;
+  animation: stay-zoom 5s infinite;
 }
 
 @keyframes stay-zoom {
-  from {
-      transform: scale(1);
-  }
-  to { 
-      transform: scale(1.1);
-  }
 
+50% {
+  transform: scale(1.2,1.2);
+}
+0% {
+  transform: scale(1,1);
+  }
+50% {
+    transform: scale(1.2,1.2);
+ }
 }
 
 #banner-logo-fade {
   max-width: 16rem;
-  top: calc(100vh - 410px);
+  top: calc(100vh - 1715px);
   position: relative;
+  left: 10px;
 }
 
 #banner-logo-fade {
   animation: go-zoom 5s infinite;
+  animation-delay: 2.5s;
 }
 
 @keyframes go-zoom {
-  from {
-      transform: scale(1);
+  0% {
+    transform: scale(1,1);
   }
-  to { 
-      transform: scale(1.1);
+  50% {
+    transform: scale(1.2,1.2);
   }
-  to {
-    transform: scale(0.5);
+  100% {
+    transform: scale(1,1);
   }
 }
 
