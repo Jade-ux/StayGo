@@ -4,6 +4,16 @@
 {% block page_header %}
 {% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+{% endblock %}
+
+{% block extra_js %}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+{% endblock %}
+
 {% block content %}
 <div class="container-fluid booking-background">
     <div class="row">
@@ -68,7 +78,7 @@
                     <div class="booking-form-inner">
                         <div class="form-group row mb-3">
                             <label for="formGroupExampleInput"
-                                class="col-4 col-md-3 col-form-label booking-form-label">FIRST NAME</label>
+                                class="col-4 col-md-3 col-form-label booking-form-label">DESTINATION</label>
                             <div class="col-8 col-md-9 booking-form-input-col">
                                 <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
                                     placeholder="Example input">
@@ -76,26 +86,18 @@
                         </div>
                         <div class="form-group row mb-3">
                             <label for="formGroupExampleInput"
-                                class="col-4 col-md-3 col-form-label booking-form-label">LAST NAME</label>
+                                class="col-4 col-md-3 col-form-label booking-form-label">NUMBER OF PEOPLE</label>
                             <div class="col-8 col-md-9 booking-form-input-col">
                                 <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
                                     placeholder="Example input">
                             </div>
                         </div>
                         <div class="form-group row mb-3">
-                            <label for="formGroupExampleInput" class="col-3 col-form-label booking-form-label">EMAIL
-                                ADDRESS</label>
-                            <div class="col-9 booking-form-input-col">
-                                <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input">
-                            </div>
-                        </div>
-                        <div class="form-group row mb-3">
                             <label for="formGroupExampleInput"
-                                class="col-3 col-form-label booking-form-label">PASSWORD</label>
+                                class="col-3 col-form-label booking-form-label">DATES</label>
                             <div class="col-9 booking-form-input-col">
                                 <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input">
+                                    placeholder="Example input" name="daterange" value="01/01/2018 - 01/15/2018"/>
                             </div>
                         </div>
                     </div>
@@ -151,6 +153,19 @@
 </div>
 
 <script>
+    //Date range picker - from http://www.daterangepicker.com/#ex5
+    // To be used for model: https://docs.djangoproject.com/en/4.0/ref/forms/widgets/#selectdatewidget (not yet implemented)
+
+    $(function () {
+        $('input[name="daterange"]').daterangepicker({
+            opens: 'left'
+        }, function (start, end, label) {
+            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end
+                .format('YYYY-MM-DD'));
+        });
+    });
+
+    // Form tabs
     var currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the current tab
 

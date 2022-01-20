@@ -29,12 +29,14 @@
  .navbar-toggler{
     z-index: 3012;
     position: relative;
- }
+ }*/
 
 .fixed-top {
-    position: fixed;
-    z-index: 1;
-}*/
+    /*position: fixed;
+    z-index: 1;*/
+    right: 5em;
+    left: 5em;
+}
 
 #sg-nav-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h45M4 15h45M4 23h45'/%3e%3c/svg%3e");
@@ -122,29 +124,13 @@
   padding-right: 0;
 }
 
-.stay-background {
-    /*background: url('/media/home-stay.png') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);*/
-    padding: 0;
-    margin: 0;
-    margin-bottom: -100px;
-}
-
-.go-background {
-    /*.background: url('/media/home-go.png') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);*/
-    padding: 0;
-    margin: 0;
-    margin-bottom: -100px;
-}
-
-.goSlides {
+/*.goSlides {
   position: relative;
   z-index: -1;
   max-width: 110%;
-}
+}*/
+
+/*------Logo & animation */
 
 .banner-logo {
  /*margin-top: 28rem;*/
@@ -154,13 +140,12 @@
 
 #banner-logo-focus {
     max-width: 26rem;
-    top: calc(100vh - 1715px);
+    top: calc(100vh - 1865px);
     position: relative;
-    right: 20px;
+    right: 35px;
 }
 
 #banner-logo-focus {
-  /*The animation code starts below*/
   animation: stay-zoom 5s infinite;
 }
 
@@ -179,9 +164,9 @@
 
 #banner-logo-fade {
   max-width: 16rem;
-  top: calc(100vh - 1715px);
+  top: calc(100vh - 1865px);
   position: relative;
-  left: 10px;
+  left: 15px;
 }
 
 #banner-logo-fade {
@@ -200,6 +185,7 @@
     transform: scale(1,1);
   }
 }
+/*------Banner images/slides */
 
 #banner-logo-left {
   text-align: left;
@@ -209,26 +195,75 @@
   text-align: right;
 }
 
-.staySlides {
-    /* This timing applies on the way IN */
-  transition-timing-function: ease-in-out;
-
-  /* A litttttle slower on the way in */
-  transition: 0.5s;
-  
-  /* Move into place */
-  transform: translateY(0);
+.stay-background {
+  background: url('/media/home-stay4.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 75em;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -100px;
 }
 
-.staySlides, .goSlides {
-  max-width:110%;
+.go-background {
+  background: url('/media/home-go4.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 75em;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -100px;
 }
 
+.stay-slides, .go-slides {
+  max-width: 100%;
+}
+
+/* Adds the animation to the slides*/
+#slideset-stay {
+  height: 75em; 
+  position: relative;
+  overflow: hidden;
+}
+
+#slideset-stay > * {
+  position: absolute; top: 100%; left: 0;
+  animation: 18s autoplay2 infinite ease-in-out;
+}
+
+#slideset-go {
+  height: 75em; 
+  position: relative;
+  overflow: hidden;
+}
+
+#slideset-go > * {
+  position: absolute; top: 100%; left: 0;
+  animation: 18s autoplay2 infinite ease-in-out;
+}
+
+@keyframes autoplay2 {
+  0% {top: 100%}
+  4% {top: 0%}
+  33.33% {top: 0%}
+  37.33% {top: -120%}
+  100% {top: -120%}
+}
+
+#slideset-stay > *:nth-child(1) {animation-delay: 0s}
+#slideset-stay > *:nth-child(2) {animation-delay: 6s}
+#slideset-stay > *:nth-child(3) {animation-delay: 12s}
+
+#slideset-go > *:nth-child(1) {animation-delay: 4s}
+#slideset-go > *:nth-child(2) {animation-delay: 10s}
+#slideset-go > *:nth-child(3) {animation-delay: 16s}
 
 /*------------------------------------------------------Blocks and containers*/
 
 .sg-container {
-  margin-top: 2.5rem;
+  margin-top: 9.5rem;
+}
+
+.sg-container-allpages {
+  margin-top: 3.8rem;
 }
 
 /*-------------------------------------------------------------------Icons*/
@@ -345,6 +380,7 @@ footer {
   font-size: 11px;
   color: white;
   padding-top: 12px;
+  max-height: 40px;
 }
 
 .booking-form-input-col {
@@ -363,7 +399,7 @@ footer {
 .form-help>a {
   color: #C9007F;
 }
-/*CHANGE STYLING-----------------------------
+/* MULTISTEP FORM
 /* Make circles that indicate the steps of the form: */
 .step {
   height: 40px;
@@ -390,8 +426,6 @@ footer {
   display: none;
 }
 
-/*UP TO HERE---------------------------------*/
-
 .form-line {
   color: #C9007F;
   font-weight: bold
@@ -400,4 +434,105 @@ footer {
 .steps-block {
   text-align:center;
   margin-top:40px;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  border: #dc6935 solid 2px;
+}
+
+/*---------------------------------------------------------------Vans page*/
+
+/*.vans-background {
+  height: calc(100vh - 164px);
+  padding: 0;
+  margin: 0;
+}*/
+
+.vans-block-main {
+  background: url('/media/campervan-hire-starsky.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: calc(100vh - 164px);
+  padding: 0;
+  margin: 0;
+}
+
+.vans-block {
+  height: 20vh;
+}
+
+.vans-block-sidebar {
+  background: url(/media/our-vans-sidebar.png) no-repeat center right fixed;
+  background-size: contain;
+  height: calc(100vh - 164px);
+  padding: 0;
+  margin: 0;
+}
+
+.dark-overlay {
+  background-color: #000000b3;
+  height: 100%;
+  margin-left: 0.5px;
+  width: 99.9%;
+}
+
+.van-description-block {
+  margin-top: 10em;
+  padding: 0 60px;
+}
+
+.van-description-block>span {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 100;
+  line-height: 2.2em;
+}  
+
+/*Slide show buttons - change styles*/
+
+.w3-display-right {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0%,-50%);
+}
+
+.w3-black, .w3-hover-black:hover {
+  color: #fff!important;
+  background-color: #000!important;
+}
+
+.w3-btn, .w3-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button, [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+.w3-display-left {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%,-50%);
+  -ms-transform: translate(-0%,-50%);
+}
+
+.w3-tooltip, .w3-display-container {
+  position: relative;
+}
+
+.w3-content, .w3-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
