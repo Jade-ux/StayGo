@@ -4,13 +4,23 @@
 {% block page_header %}
 {% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+{% endblock %}
+
+{% block extra_js %}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+{% endblock %}
+
 {% block content %}
 <div class="container-fluid vans-background">
     <div class="row">
         <div class="col-9 vans-block-main">
         </div>
         <div class="col-3 vans-block-sidebar">
-            <div class="row dark-overlay">
+            <div class="row dark-overlay2">
                 <div class="col-12 van-description-block">
                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -23,10 +33,10 @@
     </div>
 </div>
 <!--Start of body content-->
-<div class="container-fluid sg-container-allpages">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-9">
-            <div class="row sg-row-allpages">
+        <div class="col-12 col-md-9 pleft-6">
+            <div class="row mt-5">
                 <div class="col-12">
                     <h1>Starsky</h1>
                 </div>
@@ -47,65 +57,167 @@
                     <p class="sg-icon-text">Lorem ipsum dolor sit amet, consectetur </p>
                 </div>
             </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h2>Van features</h2>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p>Feature <b>Lorem Ipsum</b></p>
+                    <p>Feature <b>Lorem Ipsum</b></p>
+                    <p>Feature <b>Lorem Ipsum</b></p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p>Feature <b>Lorem Ipsum</b></p>
+                    <p>Feature <b>Lorem Ipsum</b></p>
+                    <p>Feature <b>Lorem Ipsum</b></p>
+                </div>
+                <div class="col-12 mt-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua.</p>
+                </div>
+                <div class="col-12 mt-4">
+                    <h2>Image gallery</h2>
+                </div>
+                <div class="col-12 pright-6">
+                    <div class="slideshow-container mt-2">
+                        <div class="vanSlides">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="/media/campervan-hire-starsky-1.png" style="width:100%">
+                            <div class="text">Interior 1</div>
+                        </div>
+
+                        <div class="vanSlides">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="/media/campervan-hire-starsky.jpg" style="width:100%">
+                            <div class="text">Caption Two</div>
+                        </div>
+
+                        <div class="vanSlides">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="/media/campervan-hire-starsky-1.png" style="width:100%">
+                            <div class="text">Caption Three</div>
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    </div>
+                </div>
+
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
         </div>
-        <div class="col-12 col-md-3">
-            sidebar
+        <!-- Sidebar 2-->
+        <div class="col-12 col-md-3 vans-sidebar2">
+            <div class="row dark-overlay">
+                <div class="col-12 pright-6 pt-5">
+                    <h5>Pick your dates</h5>
+                    <div class="form-group row mb-3 mt-4">
+                        <div class="col-12 booking-form-input-col">
+                            <input type="text" class="form-control vans-dates-form-input" id="formGroupExampleInput"
+                                placeholder="Example input" name="daterange" value="01/01/2018 - 01/15/2018" />
+                        </div>
+                    </div>
+                    <div class="mt-4 mb-3 center">
+                        <button class="pink-button" type="button">RESERVE</button>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <ul>
+                            <li class="sg-tick-bullets">
+                                Sidebar 2 sit amet
+                            </li>
+                            <li class="sg-tick-bullets">
+                                Sidebar 2 sit amet
+                            </li>
+                            <li class="sg-tick-bullets">
+                                Sidebar 2 sit amet
+                            </li>
+                        </ul>
+                    </div>
+                    <p>Sidebar 2 sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et
+                        dolore magna aliqua.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
 <!--Start of body content-->
 <div class="container-fluid sg-container-allpages">
-    <div class="row sg-row-allpages">
-        <div class="col-12">
-            <h2>Van features</h2>
-        </div>
-        <div class="col-12 col-md-6">
-            <p>Feature <b>Lorem Ipsum</b></p>
-            <p>Feature <b>Lorem Ipsum</b></p>
-            <p>Feature <b>Lorem Ipsum</b></p>
-        </div>
-        <div class="col-12 col-md-6">
-            <p>Feature <b>Lorem Ipsum</b></p>
-            <p>Feature <b>Lorem Ipsum</b></p>
-            <p>Feature <b>Lorem Ipsum</b></p>
-        </div>
-        <div class="col-12 mt-4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
-        </div>
-        <div class="col-12">
-            <div class="w3-content w3-display-container">
-                <img class="mySlides1" src="/media/campervan-hire-starsky-1.png" style="width:100%">
-                <img class="mySlides1" src="/media/campervan-hire-starsky-1.png" style="width:100%">
-                <img class="mySlides1" src="/media/campervan-hire-starsky-1.png" style="width:100%">
-                <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
-                <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
-              </div>
-        </div>
-    </div>
+
 </div>
 
 <script>
-    var slideIndex = [1,1];
-    var slideId = ["mySlides1"]
-    showDivs(1);
+    // Slideshow js
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-    
-    function plusDivs(n, no) {
-      showDivs(slideIndex[no] += n, no);
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
     }
-    
-    function showDivs(n, no) {
-      var i;
-      var x = document.getElementsByClassName(slideId[no]);
-      if (n > x.length) {slideIndex[no] = 1}
-      if (n < 1) {slideIndex[no] = x.length}
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
-      }
-      x[slideIndex[no]-1].style.display = "block";  
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
     }
-    </script>
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("vanSlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+    // Date picker js
+
+    //Date range picker - from http://www.daterangepicker.com/#ex5
+    // To be used for model: https://docs.djangoproject.com/en/4.0/ref/forms/widgets/#selectdatewidget (not yet implemented)
+
+    $(function () {
+        $('input[name="daterange"]').daterangepicker({
+            opens: 'left'
+        }, function (start, end, label) {
+            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end
+                .format('YYYY-MM-DD'));
+        });
+    });
+</script>
 {% endblock %}
