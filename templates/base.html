@@ -34,7 +34,6 @@
     {% block corejs %}
     <script src="https://kit.fontawesome.com/3f3f9142b7.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{% static 'js/base.js' %}"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -46,10 +45,8 @@
 <body>
     <!-------------Navbar------------->
     <nav class="navbar navbar-dark fixed-top">
-        <div class="container-fluid">
             <a class="navbar-brand staygo-logo" href="{% url 'home'%}"><img class="staygo-logo-img"
                     src="/media/staygocampervanhire.png">
-                <div class="row"></div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar">
@@ -82,7 +79,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
     </nav>
     <header class="container-fluid fixed-top"></header>
     {% if messages %}
