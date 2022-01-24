@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'home',
     'booking',
     'vans',
+    'profiles'
 ]
 
 MIDDLEWARE = [
