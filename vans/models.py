@@ -1,3 +1,68 @@
 from django.db import models
 
-# Create your models here.
+
+class Van(models.Model):
+    van_name = models.CharField(max_length=254)
+    van_description = models.TextField()
+    size_description = models.CharField(max_length=254)
+    fuel_type = models.CharField(max_length=254)
+    sleeps = models.CharField(max_length=254)
+    seats = models.CharField(max_length=254)
+    airconditioning_home_area = models.BooleanField(
+        default=False, null=True, blank=True)
+    awning = models.BooleanField(default=False, null=True, blank=True)
+    refrigerator = models.BooleanField(default=False, null=True, blank=True)
+    shower = models.BooleanField(default=False, null=True, blank=True)
+    camping_table_chairs = models.BooleanField(
+        default=False, null=True, blank=True)
+    gas_cylinder = models.BooleanField(default=False, null=True, blank=True)
+    solar_panel = models.BooleanField(default=False, null=True, blank=True)
+    toilet = models.BooleanField(default=False, null=True, blank=True)
+    heating = models.BooleanField(default=False, null=True, blank=True)
+    hot_water = models.BooleanField(default=False, null=True, blank=True)
+    tv = models.BooleanField(default=False, null=True, blank=True)
+    tv_receiver = models.BooleanField(default=False, null=True, blank=True)
+    kitchen_equipment = models.BooleanField(
+        default=False, null=True, blank=True)
+    airconditioning_cabin = models.BooleanField(
+        default=False, null=True, blank=True)
+    reversing_camera = models.BooleanField(
+        default=False, null=True, blank=True)
+    roof_rack = models.BooleanField(default=False, null=True, blank=True)
+    towbar = models.BooleanField(default=False, null=True, blank=True)
+    cruise_control = models.BooleanField(default=False, null=True, blank=True)
+    gps = models.BooleanField(default=False, null=True, blank=True)
+    power_steering = models.BooleanField(default=False, null=True, blank=True)
+    extras_bike_rack = models.BooleanField(
+        default=False, null=True, blank=True)
+    extras_awning = models.BooleanField(default=False, null=True, blank=True)
+    extras_towbar = models.BooleanField(default=False, null=True, blank=True)
+    extras_travel_box = models.BooleanField(
+        default=False, null=True, blank=True)
+    extras_chemical_toilet = models.BooleanField(
+        default=False, null=True, blank=True)
+    extras_bbq = models.BooleanField(default=False, null=True, blank=True)
+    extras_cutlery_crockery = models.BooleanField(
+        default=False, null=True, blank=True)
+    van_main_image = models.URLField(
+        max_length=1024, null=True, blank=True)
+    main_image = models.ImageField(null=True, blank=True)
+    daily_rate_december_march = models.DecimalField(
+        max_digits=6, decimal_places=2)
+    daily_rate_april_june = models.DecimalField(
+        max_digits=6, decimal_places=2)
+    daily_rate_july_september = models.DecimalField(
+        max_digits=6, decimal_places=2)
+    daily_rate_october_november = models.DecimalField(
+        max_digits=6, decimal_places=2)
+    mileage_limit = models.CharField(max_length=254)
+    price_per_extra_mile = models.DecimalField(
+        max_digits=6, decimal_places=2)
+    cleaning_fee = models.DecimalField(max_digits=6, decimal_places=2)
+    motorhome_insurance = models.CharField(max_length=254)
+    breakdown_cover = models.CharField(max_length=254)
+    security_deposit = models.DecimalField(
+        max_digits=6, decimal_places=2)
+
+    def __str__(self):
+        return self.van_name

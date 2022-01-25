@@ -58,7 +58,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-adeux-staygo-k08s8bj0rw6.ws-eu27.gitpod.io','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-jadeux-staygo-j5u658tutip.ws-eu28.gitpod.io', 
+    'https://*.127.0.0.1']
 
 ROOT_URLCONF = 'staygoapp.urls'
 
