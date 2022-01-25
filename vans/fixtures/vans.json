@@ -1,0 +1,67 @@
+[
+   {
+      "pk":1,
+      "model": "vans.vans",
+      "fields": {
+        "van_name":"Starsky",
+        "van_description": "lorem ipsum",
+        "van_features":{
+            "size_description": "Compact",
+            "fuel_type": "diesel",
+            "sleeps": 4,
+            "seats": 4
+        },
+        "van_amenities": {
+            "airconditioning_home_area": true,
+            "awning": true,
+            "refrigerator": true,
+            "shower": false,
+            "camping_table_chairs": true,
+            "gas_cylinder": true,
+            "solar_panel": false,
+            "toilet": false,
+            "heating": true,
+            "hot_water": true,
+            "tv": true,
+            "tv_receiver": false,
+            "kitchen_equipment": true,
+            "airconditioning_cabin": true,
+            "reversing_camera": false,
+            "roof_rack": false,
+            "towbar": false,
+            "cruise_control": true,
+            "gps": true,
+            "power_steering": true
+        },
+        "van_extras":{
+            "bike_rack": true,
+            "awning": true,
+            "towbar": true,
+            "travel_box": true,
+            "chemical_toilet": true,
+            "bbq": true,
+            "cutlery_crockery": true
+        },
+        "van_main_image": "url",
+        "van_gallery_images": "urls",
+        "van_daily_rate":{
+           "December-March": 90.00,
+           "April-June": 110,
+           "July-September": 130,
+           "October-November": 110
+        },
+        "van_additional_costs":{
+          "mileage_limit": "1000 per day",
+          "price_per_extra_mile": 1,
+          "cleaning_fee": 0
+       },
+        "van_insurances":{
+            "motorhome_insurance": "Included",
+            "breakdown_cover": "National",
+            "security_deposit": 850
+            },
+        "availability": "",
+        "testimonials": ""
+     }
+      } 
+]

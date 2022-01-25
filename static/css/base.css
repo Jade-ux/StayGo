@@ -22,14 +22,8 @@
   /*-------------------------------------------------------------Nav - Menu*/
 
 .staygo-logo-img {
-    max-width: 26rem;
+    max-width: 26em;
   }
-
-  /*
- .navbar-toggler{
-    z-index: 3012;
-    position: relative;
- }*/
 
 .fixed-top {
     position: absolute;
@@ -38,6 +32,18 @@
     left: 5em;
 }
 
+@media only screen and (max-width: 576px) {
+  .staygo-logo-img {
+    max-width: 16em;
+  }
+
+  .fixed-top {
+    position: absolute;
+    z-index: 1;
+    right: 1em;
+    left: 2em;
+  }
+}
 
 #nav-burger {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h45M4 15h45M4 23h45'/%3e%3c/svg%3e") !important;
@@ -522,10 +528,21 @@ input.invalid {
 
 .vans-block-main {
   background: url('/media/campervan-hire-starsky.jpg') no-repeat center center fixed;
-  background-size: cover;
   height: calc(100vh - 164px);
   padding: 0;
   margin: 0;
+}
+
+@media only screen and (max-width: 576px) {
+    .vans-block-main {
+        background-size: cover;
+        height: 20em;
+        background: url('/media/campervan-hire-starsky.jpg') no-repeat top left;
+  }
+}
+
+.cover-background {
+  background-size: cover;
 }
 
 .vans-block {
@@ -538,6 +555,12 @@ input.invalid {
   height: calc(100vh - 164px);
   padding: 0;
   margin: 0;
+}
+
+@media only screen and (max-width: 576px) {
+  .vans-block-sidebar {
+    background: none;
+  }
 }
 
 .dark-overlay {
@@ -653,10 +676,10 @@ img {vertical-align: middle;}
 /*UP TO HERE--------------------*/
 
 
-.vans-sidebar2 {
+/*.vans-sidebar2 {
   background-image: url("/media/our-vans-sidebar2.png");
   background-color: black;
-}
+}*/
 
 .vans-dates-form-input {
   border-radius: 8px;
