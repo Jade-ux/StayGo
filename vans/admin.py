@@ -4,13 +4,10 @@ from .models import Van
 
 class VanAdmin(admin.ModelAdmin):
     list_display = (
-        'van_name',
-        'van_description', 
-        'size_description',
+        'van_name', 
         'fuel_type',
         'sleeps',
         'seats',
-        'airconditioning_home_area',
     ) 
 
     ordering = ('van_name',)
