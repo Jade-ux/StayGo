@@ -1,1 +1,1 @@
-web: gunicorn staygo.wsgi:application
+web: gunicorn staygoapp.wsgi:application
