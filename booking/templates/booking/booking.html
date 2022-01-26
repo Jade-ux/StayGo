@@ -228,18 +228,4 @@
     }
 </script>
 
-<script>
-    //Date range picker - from http://www.daterangepicker.com/#ex5
-       // To be used for model: https://docs.djangoproject.com/en/4.0/ref/forms/widgets/#selectdatewidget (not yet implemented)
-   
-       $(function () {
-           $('input[name="daterange"]').daterangepicker({
-               opens: 'left'
-           }, function (start, end, label) {
-               console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end
-                   .format('YYYY-MM-DD'));
-           });
-       });
-    //Do not close this script tag
-
 {% endblock %}
