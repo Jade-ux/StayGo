@@ -12,6 +12,8 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+
 {% endblock %}
 
 {% block content %}
@@ -37,23 +39,24 @@
                 <div class="col-12">
                     <h1>{{ van.van_name }}</h1>
                 </div>
-                <div class="col-12 col-md-3 sg-icon-blocks">
-                    <i class="fas fa-bed sg-icons"></i>
+                <div class="col-6 col-md-3 sg-icon-blocks">
+                    <i class="fas fa-caravan sg-icons"></i>
                     <p class="sg-icon-text">{{van.size_description}} </p>
                 </div>
-                <div class="col-12 col-md-3 sg-icon-blocks">
-                    <i class="fas fa-bed sg-icons"></i>
+                <div class="col-6 col-md-3 sg-icon-blocks">
+                    <i class="fas fa-gas-pump sg-icons"></i>
                     <p class="sg-icon-text">{{van.fuel_type}} </p>
                 </div>
-                <div class="col-12 col-md-3 sg-icon-blocks">
+                <div class="col-6 col-md-3 sg-icon-blocks">
                     <i class="fas fa-bed sg-icons"></i>
                     <p class="sg-icon-text">Sleeps: <b>{{van.sleeps}}</b></p>
                 </div>
-                <div class="col-12 col-md-3 sg-icon-blocks">
-                    <i class="fas fa-bed sg-icons"></i>
+                <div class="col-6 col-md-3 sg-icon-blocks">
+                    <i class="fas fa-user sg-icons"></i>
                     <p class="sg-icon-text">Seats: <b>{{van.seats}}</b></p>
                 </div>
             </div>
+            <!--Van features-->
             <div class="row mt-4">
                 <div class="col-12">
                     <h2>Van features</h2>
@@ -70,6 +73,12 @@
                     {% endif %}
                     {% if van.gas_cylinder %}
                     <p><i class="far fa-check-circle pink"></i> Gas Cylinder</p>
+                    {% endif %}
+                    {% if van.kitchen_equipment %}
+                    <p><i class="far fa-check-circle pink"></i> Kitchen equipment</p>
+                    {% endif %}
+                    {% if van.airconditioning_cabin %}
+                    <p><i class="far fa-check-circle pink"></i> Aiconditioning in cabin</p>
                     {% endif %}
                 </div>
                 <div class="col-12 col-md-6">
@@ -88,18 +97,73 @@
                     {% if van.hot_water %}
                     <p><i class="far fa-check-circle pink"></i> Hot water</p>
                     {% endif %}
-                    <p><i class="far fa-check-circle pink"></i> Hot water</p>
-                    <p><i class="far fa-check-circle pink"></i> Hot water</p>
+                    {% if van.tv %}
+                    <p><i class="far fa-check-circle pink"></i> TV</p>
+                    {% endif %}
+                    {% if van.tv_receiver %}
+                    <p><i class="far fa-check-circle pink"></i> TV Receiver</p>
+                    {% endif %}
+                    {% if van.reversing_camera %}
+                    <p><i class="far fa-check-circle pink"></i> Reversing camera</p>
+                    {% endif %}
+                    {% if van.roof_rack %}
+                    <p><i class="far fa-check-circle pink"></i> Roof rack</p>
+                    {% endif %}
+                    {% if van.towbar %}
+                    <p><i class="far fa-check-circle pink"></i> Towbar</p>
+                    {% endif %}
+                    {% if van.cruise_control %}
+                    <p><i class="far fa-check-circle pink"></i> Cruise control</p>
+                    {% endif %}
+                    {% if van.gps %}
+                    <p><i class="far fa-check-circle pink"></i> GPS</p>
+                    {% endif %}
+                    {% if van.power_steering %}
+                    <p><i class="far fa-check-circle pink"></i> Power steering</p>
+                    {% endif %}
                 </div>
-                
+
                 <div class="col-12 mt-4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et
-                        dolore magna aliqua.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et
-                        dolore magna aliqua.</p>
+                    <p>Additional items can be hired as well, see below.</p>
                 </div>
+            </div>
+            <!--Extra equipment-->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h2>Extras</h2>
+                </div>
+                <div class="col-12 col-md-6">
+                    {% if van.extras_bike_rack %}
+                    <p><i class="fas fa-plus pink"></i> Bike rack</p>
+                    {% endif %}
+                    {% if van.extras_awning %}
+                    <p><i class="fas fa-plus pink"></i> Awning</p>
+                    {% endif %}
+                    {% if van.extras_towbar %}
+                    <p><i class="fas fa-plus pink"></i> Towbar</p>
+                    {% endif %}
+                    {% if van.extras_travel_box %}
+                    <p><i class="fas fa-plus pink"></i> Travel box</p>
+                    {% endif %}
+                </div>
+                <div class="col-12 col-md-6">
+                    {% if van.extras_chemical_toilet %}
+                    <p><i class="fas fa-plus pink"></i> Chemical toilet</p>
+                    {% endif %}
+                    {% if van.extras_bbq %}
+                    <p><i class="fas fa-plus pink"></i> BBQ</p>
+                    {% endif %}
+                    {% if van.extras_cutlery_crockery %}
+                    <p><i class="fas fa-plus pink"></i> Cutlery and crockery package </p>
+                    {% endif %}
+                </div>
+                <div class="col-12 col-lg-8 mt-4">
+                    <p>We can cater for most needs and requirements from breakfast food packages to wine and chocolate
+                        indulgent package for that special surprise.</p>
+                </div>
+            </div>
+            <!--Image gallery-->
+            <div class="row mt-4">
                 <div class="col-12 mt-4">
                     <h2>Image gallery</h2>
                 </div>
@@ -145,37 +209,41 @@
                                 placeholder="Example input" name="daterange" value="01/01/2018 - 01/15/2018" />
                         </div>
                     </div>
-                    <div class="mt-4 mb-3 center">
+                    <div class="mt-4 mb-4 center">
                         <button class="pink-button" type="button">RESERVE</button>
                     </div>
                     <div class="col-12 mt-3">
-                        <ul>
-                            <li class="sg-tick-bullets">
-                                Sidebar 2 sit amet
-                            </li>
-                            <li class="sg-tick-bullets">
-                                Sidebar 2 sit amet
-                            </li>
-                            <li class="sg-tick-bullets">
-                                Sidebar 2 sit amet
-                            </li>
-                        </ul>
+                        <p><i class="fas fa-check pink"></i>
+                            24/7 roadside assistance</p>
+                        <p><i class="fas fa-check pink"></i>
+                            Flexible cancellation</p>
+                        <p><i class="fas fa-check pink"></i>
+                            Only pay 5% upfront</p>
                     </div>
-                    <p>Sidebar 2 sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et
-                        dolore magna aliqua.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et
-                        dolore magna aliqua.</p>
+                    <div class="col-12 mt-4">
+                    <h5 class="mb-3">Terms</h5>
+                    <p>Two nights minimum</p>
+                    <p>Pick up time: <b>10:00</b></p>
+                    <p>Return time: <b>16:00</b></p>
+                </div>
+                <div class="col-12 mt-4">
+                    <h5 class="mb-3">Cancellation policy</h5>
+                    <p>Flexible, contact us</p>
+                </div>
+                <div class="col-12 mt-4">
+                    <h5 class="mb-3">Pricing</h5>
+                    <p>Weekly mileage limit: <b>1,500</b></p>
+                    <p>Price per extra mile: <b>£ 1</b></p>
+                    <p>Cleaning fee: <b>£ 0</b></p>
+                    <h5 class="mb-3">Discounts</h5>
+                    <p>Early bird: <b>10% off</b> if booked more than 10 weeks in advance</p>
+                    <p>Price per extra mile: <b>£ 1</b></p>
+                </div>
                 </div>
             </div>
 
         </div>
     </div>
-</div>
-<!--Start of body content-->
-<div class="container-fluid sg-container-allpages">
-
 </div>
 
 <script>
@@ -210,19 +278,8 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
-
-    // Date picker js
-
-    //Date range picker - from http://www.daterangepicker.com/#ex5
-    // To be used for model: https://docs.djangoproject.com/en/4.0/ref/forms/widgets/#selectdatewidget (not yet implemented)
-
-    $(function () {
-        $('input[name="daterange"]').daterangepicker({
-            opens: 'left'
-        }, function (start, end, label) {
-            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end
-                .format('YYYY-MM-DD'));
-        });
-    });
 </script>
+
+
+
 {% endblock %}
