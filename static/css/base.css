@@ -234,7 +234,7 @@
 .stay-background {
   /*background: url('/media/home-stay4.png') no-repeat center center fixed;
   background-size: cover;*/
-  height: 68em;
+  height: 75em;
   padding: 0;
   margin: 0;
   margin-bottom: -100px;
@@ -243,7 +243,7 @@
 .go-background {
   /*background: url('/media/home-go4.png') no-repeat center center fixed;
   background-size: cover;*/
-  height: 68m;
+  height: 75m;
   padding: 0;
   margin: 0;
   margin-bottom: -100px;
@@ -255,11 +255,12 @@
 
 /* Adds the animation to the slides*/
 #slideset-stay {
-  height: 68em; 
+  height: 75em; 
   position: relative;
   overflow: hidden;
 }
 
+/*
 #slideset-stay > *:nth-child(1) {
   position: absolute; top: 100%; left: 0;
   animation: 18s autoplay1 infinite ease-in-out;
@@ -274,13 +275,77 @@
   position: absolute; top: 100%; left: 0;
   animation: 18s autoplay2 infinite ease-in-out;
 }
+*/
 
 #slideset-go {
-  height: 68em; 
+  height: 75em; 
   position: relative;
   overflow: hidden;
 }
 
+@keyframes sgFadeInOut {
+    0% {
+    opacity:1;
+  }
+
+  45% {
+  opacity:1;
+  }
+
+  55% {
+  opacity:0;
+  }
+
+  100% {
+  opacity:0;
+  }
+
+}
+
+#slideset-stay > *:nth-child(2) {
+  animation-name: sgFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+  animation-direction: alternate;
+  position: absolute;
+  top: 0;
+}
+
+#slideset-stay > *:nth-child(3) {
+  animation-name: sgFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
+  animation-duration: 6s;
+  animation-direction: alternate;
+  position: absolute;
+  top: 0;
+}
+
+#slideset-go > *:nth-child(2) {
+  animation-name: sgFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
+  animation-duration: 6s;
+  animation-direction: alternate;
+  position: absolute;
+  top: 0;
+}
+
+#slideset-go > *:nth-child(3) {
+  animation-name: sgFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 6s;
+  animation-duration: 6s;
+  animation-direction: alternate;
+  position: absolute;
+  top: 0;
+}
+
+/*
 #slideset-go > *:nth-child(1) {
   position: absolute; top: 100%; left: 0;
   animation: 18s autoplay1 infinite ease-in-out;
@@ -295,6 +360,7 @@
   position: absolute; top: 100%; left: 0;
   animation: 18s autoplay2 infinite ease-in-out;
 }
+
 
 @keyframes autoplay1 {
   0% {top: 100%}
@@ -319,11 +385,12 @@
 #slideset-go > *:nth-child(1) {animation-delay: 0s}
 #slideset-go > *:nth-child(2) {animation-delay: 7s}
 #slideset-go > *:nth-child(3) {animation-delay: 14s}
+*/
 
 /*------------------------------------------------------Blocks and containers*/
 
 .sg-container {
-  margin-top: 9.5rem;
+  margin-top: 0rem;
 }
 
 .sg-container-allpages {
