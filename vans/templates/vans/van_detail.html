@@ -34,7 +34,7 @@
 <!--Start of body content-->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-9 pleft-6">
+        <div class="col-12 col-lg-9 pleft-6">
             <div class="row mt-5">
                 <div class="col-12">
                     <h1>{{ van.van_name }}</h1>
@@ -164,7 +164,7 @@
             </div>
             <!--Image gallery-->
             <div class="row mt-4">
-                <div class="col-12 mt-4">
+                <div class="col-12">
                     <h2>Image gallery</h2>
                 </div>
                 <div class="col-12 pright-6">
@@ -194,19 +194,41 @@
                         <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
                 </div>
-
-
+            </div>
+            <!---Testimonial 1-->
+            <div class="col-12 mt-4 mb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>What others say</h2>
+                    </div>
+                    <div class="col-12 col-md-3 mb-3">
+                        <img class="testimonial-img" src="/media/testimonial1.png">
+                    </div>
+                    <div class="col-12 col-md-9">
+                        We had an excellent trip away travelling in iris! She’s a lovely van, very well kept, with all
+                        you need for your trip! Oakley was fantastic, lovely guy and always available to help and answer
+                        questions at any point! Will certainly be using again!!
+                        <div class="row">
+                            <div class="col-12 col-md-4 sg-stars"><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i></div>
+                            <div class="col-12 col-md-4 mt-3">
+                                October 2020
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Sidebar 2-->
-        <div class="col-12 col-md-3 vans-sidebar2 d-none-sm">
+        <div class="col-12 col-lg-3 vans-sidebar2">
             <div class="row dark-overlay">
                 <div class="col-12 pright-6 pt-5">
                     <h5>Pick your dates</h5>
                     <div class="form-group row mb-3 mt-4">
                         <div class="col-12 booking-form-input-col">
                             <input type="text" class="form-control vans-dates-form-input" id="formGroupExampleInput"
-                                placeholder="Example input" name="daterange" value="01/01/2018 - 01/15/2018" />
+                                placeholder="Example input" name="daterange" value="02/01/2022 - 02/15/2022" />
                         </div>
                     </div>
                     <div class="mt-4 mb-4 center">
@@ -221,27 +243,36 @@
                             Only pay 5% upfront</p>
                     </div>
                     <div class="col-12 mt-4">
-                    <h5 class="mb-3">Terms</h5>
-                    <p>Two nights minimum</p>
-                    <p>Pick up time: <b>10:00</b></p>
-                    <p>Return time: <b>16:00</b></p>
-                </div>
-                <div class="col-12 mt-4">
-                    <h5 class="mb-3">Cancellation policy</h5>
-                    <p>Flexible, contact us</p>
-                </div>
-                <div class="col-12 mt-4">
-                    <h5 class="mb-3">Pricing</h5>
-                    <p>Weekly mileage limit: <b>1,500</b></p>
-                    <p>Price per extra mile: <b>£ 1</b></p>
-                    <p>Cleaning fee: <b>£ 0</b></p>
-                    <h5 class="mb-3">Discounts</h5>
-                    <p>Early bird: <b>10% off</b> if booked more than 10 weeks in advance</p>
-                    <p>Price per extra mile: <b>£ 1</b></p>
-                </div>
+                        <h5 class="mb-3">Terms</h5>
+                        <p>Two nights minimum</p>
+                        <p>Pick up time: <b>10:00</b></p>
+                        <p>Return time: <b>16:00</b></p>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <h5 class="mb-3">Cancellation policy</h5>
+                        <p>Flexible, contact us</p>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <h5 class="mb-3">Pricing</h5>
+                        <p>Weekly mileage limit: <b>1,500</b></p>
+                        <p>Price per extra mile: <b>£ 1</b></p>
+                        <p>Cleaning fee: <b>£ 0</b></p>
+                        <h5 class="mb-3">Discounts</h5>
+                        <p>Early bird: <b>10% off</b> if booked more than 10 weeks in advance</p>
+                        <p>Price per extra mile: <b>£ 1</b></p>
+                    </div>
                 </div>
             </div>
 
+        </div>
+        <!-- Sidebar 2 Mobile-->
+        <div class="col-12 px-5 vans-sidebar2-mobile">
+            <div class="col-12 pt-5">
+                <h5 class="white center">Book your adventure</h5>
+                <div class="mt-4 mb-4 center">
+                    <button class="pink-button" type="button">BOOK</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
