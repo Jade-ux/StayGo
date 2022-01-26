@@ -47,22 +47,25 @@ class Van(models.Model):
     van_main_image = models.URLField(
         max_length=1024, null=True, blank=True)
     main_image = models.ImageField(null=True, blank=True)
-    daily_rate_december_to_march = models.DecimalField(default=90, 
-        max_digits=6, decimal_places=2)
-    daily_rate_april_to_june = models.DecimalField(default=110, 
-        max_digits=6, decimal_places=2)
-    daily_rate_july_to_september = models.DecimalField(default=130, 
-        max_digits=6, decimal_places=2)
-    daily_rate_october_to_november = models.DecimalField(default=110, 
-        max_digits=6, decimal_places=2)
-    mileage_limit = models.CharField(default="1000km", max_length=254)
-    price_per_extra_mile = models.DecimalField(default=1,
-        max_digits=6, decimal_places=2)
-    cleaning_fee = models.DecimalField(default=0, max_digits=6, decimal_places=2)
-    motorhome_insurance = models.CharField(default="Included", max_length=254)
+    daily_rate_december_to_march = models.DecimalField(
+        default=90, max_digits=6, decimal_places=2)
+    daily_rate_april_to_june = models.DecimalField(
+        default=110, max_digits=6, decimal_places=2)
+    daily_rate_july_to_september = models.DecimalField(
+        default=130, max_digits=6, decimal_places=2)
+    daily_rate_october_to_november = models.DecimalField(
+        default=110, max_digits=6, decimal_places=2)
+    mileage_limit = models.CharField(
+        default="1000km", max_length=254)
+    price_per_extra_mile = models.DecimalField(
+        default=1, max_digits=6, decimal_places=2)
+    cleaning_fee = models.DecimalField(
+        default=0, max_digits=6, decimal_places=2)
+    motorhome_insurance = models.CharField(
+        default="Included", max_length=254)
     breakdown_cover = models.CharField(default="National", max_length=254)
-    security_deposit = models.DecimalField(default=850,
-        max_digits=6, decimal_places=2)
+    security_deposit = models.DecimalField(
+        default=850, max_digits=6, decimal_places=2)
 
     def __str__(self):
         return self.van_name
