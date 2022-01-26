@@ -22,7 +22,8 @@
         <div class="col-12 col-md-3 vans-block-sidebar">
             <div class="row dark-overlay2">
                 <div class="col-12 van-description-block">
-                    <span>{{ van.van_name }}is this...{{van.van_description}}</span>
+                    <h1>VAN: {{ van.van_name }}</h1>
+                    <span>is this...{{van.van_description}}</span>
                 </div>
             </div>
         </div>
@@ -34,7 +35,7 @@
         <div class="col-12 col-md-9 pleft-6">
             <div class="row mt-5">
                 <div class="col-12">
-                    <h1>Starsky</h1>
+                    <h1>{{ van.van_name }}</h1>
                 </div>
                 <div class="col-12 col-md-3 sg-icon-blocks">
                     <i class="fas fa-bed sg-icons"></i>
@@ -42,15 +43,15 @@
                 </div>
                 <div class="col-12 col-md-3 sg-icon-blocks">
                     <i class="fas fa-bed sg-icons"></i>
-                    <p class="sg-icon-text">Lorem ipsum dolor sit amet, consectetur </p>
+                    <p class="sg-icon-text">{{van.fuel_type}} </p>
                 </div>
                 <div class="col-12 col-md-3 sg-icon-blocks">
                     <i class="fas fa-bed sg-icons"></i>
-                    <p class="sg-icon-text">Lorem ipsum dolor sit amet, consectetur </p>
+                    <p class="sg-icon-text">Sleeps: <b>{{van.sleeps}}</b></p>
                 </div>
                 <div class="col-12 col-md-3 sg-icon-blocks">
                     <i class="fas fa-bed sg-icons"></i>
-                    <p class="sg-icon-text">Lorem ipsum dolor sit amet, consectetur </p>
+                    <p class="sg-icon-text">Seats: <b>{{van.seats}}</b></p>
                 </div>
             </div>
             <div class="row mt-4">
@@ -58,15 +59,34 @@
                     <h2>Van features</h2>
                 </div>
                 <div class="col-12 col-md-6">
-                    <p>Feature <b>Lorem Ipsum</b></p>
-                    <p>Feature <b>Lorem Ipsum</b></p>
-                    <p>Feature <b>Lorem Ipsum</b></p>
+                    {% if van.airconditioning_home_area %}
+                    <p><i class="far fa-check-circle pink"></i> Air Conditioning Home Area</p>
+                    {% endif %}
+                    {% if van.refrigerator %}
+                    <p><i class="far fa-check-circle pink"></i> Refrigerator</p>
+                    {% endif %}
+                    {% if van.camping_table_chairs %}
+                    <p><i class="far fa-check-circle pink"></i> Camping table and chairs</p>
+                    {% endif %}
+                    {% if van.gas_cylinder %}
+                    <p><i class="far fa-check-circle pink"></i> Gas Cylinder</p>
+                    {% endif %}
                 </div>
                 <div class="col-12 col-md-6">
-                    <p>Feature <b>Lorem Ipsum</b></p>
-                    <p>Feature <b>Lorem Ipsum</b></p>
-                    <p>Feature <b>Lorem Ipsum</b></p>
+                    {% if van.awning %}
+                    <p><i class="far fa-check-circle pink"></i> Awning</p>
+                    {% endif %}
+                    {% if van.solar_panel %}
+                    <p><i class="far fa-check-circle pink"></i> Solar Panel</p>
+                    {% endif %}
+                    {% if van.toilet %}
+                    <p><i class="far fa-check-circle pink"></i> Toilet</p>
+                    {% endif %}
+                    {% if van.heating %}
+                    <p><i class="far fa-check-circle pink"></i> Heating</p>
+                    {% endif %}
                 </div>
+                
                 <div class="col-12 mt-4">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et
@@ -95,8 +115,8 @@
                             <img src="/media/campervan-hire-starsky-1.png" style="width:100%">
                         </div>
 
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a>
+                        <a class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
 
                     </div>
                     <div class="slide-progress mt-3">

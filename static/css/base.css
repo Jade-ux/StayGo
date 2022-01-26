@@ -1,35 +1,34 @@
-
 * {
-    padding: 0;
-    margin: 0;
-    border: 0;
-  }
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
 
-  /* Pushes content down the pg, removed as it was interferring with the nav button
+/* Pushes content down the pg, removed as it was interferring with the nav button
   .header-container {
     padding-top: 164px;
 }*/
 
-  /*-------------------------------------------------------------Fonts*/
+/*-------------------------------------------------------------Fonts*/
 
-  body {
-      font-family: 'Montserrat', sans-serif;
-      color: #525252;
-      font-size: 0.9rem;
-  }
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #525252;
+  font-size: 0.9rem;
+}
 
 
-  /*-------------------------------------------------------------Nav - Menu*/
+/*-------------------------------------------------------------Nav - Menu*/
 
 .staygo-logo-img {
-    max-width: 26em;
-  }
+  max-width: 26em;
+}
 
 .fixed-top {
-    position: absolute;
-    z-index: 1;
-    right: 5em;
-    left: 5em;
+  position: absolute;
+  z-index: 1;
+  right: 5em;
+  left: 5em;
 }
 
 @media only screen and (max-width: 576px) {
@@ -51,7 +50,7 @@
 
 .navbar-dark .navbar-toggler {
   color: rgba(0, 0, 0, 0);
-  border-color: rgba(255,255,255,.1);
+  border-color: rgba(255, 255, 255, .1);
 }
 
 .navbar-dark .navbar-toggler {
@@ -71,6 +70,7 @@
   background-color: #404141;
   transition: transform .3s ease-in-out;
 }
+
 /*
 .offcanvas-header .btn-close {
   margin-right: 1.2rem;
@@ -88,51 +88,51 @@
   padding: 3.5rem 3em;
 }
 
-  /*---------------------------------------------------------------Colours*/
+/*---------------------------------------------------------------Colours*/
 
-  .pink {
-    color: #C9007F;
-  }
+.pink {
+  color: #C9007F;
+}
 
-  .purple {
-    color: #5B1E74;
-  }
+.purple {
+  color: #5B1E74;
+}
 
-  /*-------------------------------------------------------------Headings*/
-  
-  h1, 
-  h2, 
-  h3, 
-  h4 {
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #5B1E74;
-    font-weight: 400;
-  }
+/*-------------------------------------------------------------Headings*/
 
-  h1,
-  h2 {
-    margin-bottom: 2rem;
-  }
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #5B1E74;
+  font-weight: 400;
+}
 
-  /*---------------------------------------------------------------Buttons*/
+h1,
+h2 {
+  margin-bottom: 2rem;
+}
 
-  .pink-button {
-    background-color: #C9007F;
-    color: #fff;
-    padding: 10px 20px 10px 20px;
-    font-family: 'Roboto Condensed';
-    font-size: 16px;
-    border-radius: 6px;
-    margin-left: 10px;
-  }
+/*---------------------------------------------------------------Buttons*/
+
+.pink-button {
+  background-color: #C9007F;
+  color: #fff;
+  padding: 10px 20px 10px 20px;
+  font-family: 'Roboto Condensed';
+  font-size: 16px;
+  border-radius: 6px;
+  margin-left: 10px;
+}
 
 .btn-primary {
-    background-color: #c9007f;
-    border-color: #c9007f;
-    padding: 10px 20px 10px 20px;
-    font-family: 'Roboto Condensed';
-    font-size: 16px;
-    border-radius: 6px;
+  background-color: #c9007f;
+  border-color: #c9007f;
+  padding: 10px 20px 10px 20px;
+  font-family: 'Roboto Condensed';
+  font-size: 16px;
+  border-radius: 6px;
 }
 
 .btn-primary:hover {
@@ -140,7 +140,8 @@
   border-color: #5B1E74;
 }
 
-.daterangepicker td.active, .daterangepicker td.active {
+.daterangepicker td.active,
+.daterangepicker td.active {
   background-color: #c9007f !important;
   border-color: transparent !important;
 }
@@ -149,12 +150,14 @@
   background-color: #c9007f21 !important;
 }
 
-.start-date, .end-date, .active.end-date.in-range.available {
+.start-date,
+.end-date,
+.active.end-date.in-range.available {
   background-color: #c9007f !important;
   border-color: transparent;
 }
 
-  /*-------------------------------------------------------------Banners*/
+/*-------------------------------------------------------------Banners*/
 
 .container-banner-home {
   padding-right: 0;
@@ -169,16 +172,16 @@
 /*------Logo & animation */
 
 .banner-logo {
- /*margin-top: 28rem;*/
+  /*margin-top: 28rem;*/
   padding-left: 0;
   padding-right: 0;
 }
 
 #banner-logo-focus {
-    max-width: 26rem;
-    top: calc(100vh - 1865px);
-    position: relative;
-    right: 35px;
+  max-width: 26rem;
+  top: calc(100vh - 1865px);
+  position: relative;
+  right: 35px;
 }
 
 #banner-logo-focus {
@@ -187,15 +190,17 @@
 
 @keyframes stay-zoom {
 
-50% {
-  transform: scale(1.2,1.2);
-}
-0% {
-  transform: scale(1,1);
+  50% {
+    transform: scale(1.2, 1.2);
   }
-50% {
-    transform: scale(1.2,1.2);
- }
+
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.2, 1.2);
+  }
 }
 
 #banner-logo-fade {
@@ -212,15 +217,18 @@
 
 @keyframes go-zoom {
   0% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
+
   50% {
-    transform: scale(1.2,1.2);
+    transform: scale(1.2, 1.2);
   }
+
   100% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
 }
+
 /*------Banner images/slides */
 
 #banner-logo-left {
@@ -249,13 +257,14 @@
   margin-bottom: -100px;
 }
 
-.stay-slides, .go-slides {
+.stay-slides,
+.go-slides {
   max-width: 100%;
 }
 
 /* Adds the animation to the slides*/
 #slideset-stay {
-  height: 75em; 
+  height: 75em;
   position: relative;
   overflow: hidden;
 }
@@ -278,67 +287,90 @@
 */
 
 #slideset-go {
-  height: 75em; 
+  height: 75em;
   position: relative;
   overflow: hidden;
 }
 
 @keyframes sgFadeInOut {
-    0% {
-    opacity:1;
+  0% {
+    opacity: 1;
   }
 
   45% {
-  opacity:1;
+    opacity: 1;
   }
 
   55% {
-  opacity:0;
+    opacity: 0;
   }
 
   100% {
-  opacity:0;
+    opacity: 0;
   }
 
 }
 
-#slideset-stay > *:nth-child(2) {
+#slideset-stay>*:nth-child(3) {
   animation-name: sgFadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  /*animation-delay: 18s;*/
   animation-duration: 6s;
   animation-direction: alternate;
   position: absolute;
   top: 0;
 }
 
-#slideset-stay > *:nth-child(3) {
+#slideset-stay>*:nth-child(1) {
   animation-name: sgFadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-delay: 3s;
+  animation-delay: 18s;
   animation-duration: 6s;
   animation-direction: alternate;
   position: absolute;
   top: 0;
 }
 
-#slideset-go > *:nth-child(2) {
+#slideset-stay>*:nth-child(2) {
   animation-name: sgFadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-delay: 3s;
+  animation-delay: 8s;
   animation-duration: 6s;
   animation-direction: alternate;
   position: absolute;
   top: 0;
 }
 
-#slideset-go > *:nth-child(3) {
+#slideset-go>*:nth-child(3) {
   animation-name: sgFadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-delay: 6s;
+  /*animation-delay: 18s;*/
+  animation-duration: 6s;
+  animation-direction: alternate;
+  position: absolute;
+  top: 0;
+}
+
+#slideset-go>*:nth-child(1) {
+  animation-name: sgFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 21s;
+  animation-duration: 6s;
+  animation-direction: alternate;
+  position: absolute;
+  top: 0;
+}
+
+#slideset-go>*:nth-child(2) {
+  animation-name: sgFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 11s;
   animation-duration: 6s;
   animation-direction: alternate;
   position: absolute;
@@ -434,7 +466,8 @@
   height: 9rem;
 }
 
-.sg-stars, .sg-down {
+.sg-stars,
+.sg-down {
   text-align: center;
 }
 
@@ -543,6 +576,7 @@ footer {
 .form-help>a {
   color: #C9007F;
 }
+
 /* MULTISTEP FORM
 /* Make circles that indicate the steps of the form: */
 .step {
@@ -576,8 +610,8 @@ footer {
 }
 
 .steps-block {
-  text-align:center;
-  margin-top:40px;
+  text-align: center;
+  margin-top: 40px;
 }
 
 /* Mark input boxes that gets an error on validation: */
@@ -593,6 +627,11 @@ input.invalid {
   margin: 0;
 }*/
 
+.van-description-block>h1 {
+  color: #fff;
+  font-size: 1.6em;
+}
+
 .vans-block-main {
   background: url('/media/campervan-hire-starsky.jpg') no-repeat center center fixed;
   height: calc(100vh - 164px);
@@ -601,10 +640,10 @@ input.invalid {
 }
 
 @media only screen and (max-width: 576px) {
-    .vans-block-main {
-        background-size: cover;
-        height: 20em;
-        background: url('/media/campervan-hire-starsky.jpg') no-repeat top left;
+  .vans-block-main {
+    background-size: cover;
+    height: 20em;
+    background: url('/media/campervan-hire-starsky.jpg') no-repeat top left;
   }
 }
 
@@ -654,14 +693,26 @@ input.invalid {
   font-size: 1.1rem;
   font-weight: 100;
   line-height: 2.2em;
-}  
+}
 
 /* Slideshow styles - CHANGE*/
 
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.vanSlides {display: none}
-img {vertical-align: middle;}
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0
+}
+
+.vanSlides {
+  display: none
+}
+
+img {
+  vertical-align: middle;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -672,7 +723,8 @@ img {vertical-align: middle;}
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -694,8 +746,9 @@ img {vertical-align: middle;}
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -730,14 +783,20 @@ img {vertical-align: middle;}
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
 }
 
 /*UP TO HERE--------------------*/
@@ -753,12 +812,14 @@ img {vertical-align: middle;}
   border: #C9007F solid 2px;
 }
 
-a.next, a.prev {
+a.next,
+a.prev {
   text-decoration: none;
 }
 
-.next, .prev {
-  color:#C9007F;
+.next,
+.prev {
+  color: #C9007F;
   font-size: 32px;
   cursor: pointer;
   position: absolute;
@@ -787,7 +848,8 @@ a.next, a.prev {
   text-align: center;
 }
 
-a.next:hover, a.prev:hover {
+a.next:hover,
+a.prev:hover {
   background-color: #fff;
-  color:#C9007F;
+  color: #C9007F;
 }
