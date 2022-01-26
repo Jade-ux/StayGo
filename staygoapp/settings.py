@@ -59,8 +59,9 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-jadeux-staygo-j5u658tutip.ws-eu28.gitpod.io', 
-    'https://*.127.0.0.1']
+    'https://8000-jadeux-staygo-4idr8qvdp0y.ws-eu29.gitpod.io',
+    'https://*.127.0.0.1',
+    'http://127.0.0.1:8000/']
 
 ROOT_URLCONF = 'staygoapp.urls'
 

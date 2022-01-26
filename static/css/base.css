@@ -234,7 +234,7 @@
 .stay-background {
   /*background: url('/media/home-stay4.png') no-repeat center center fixed;
   background-size: cover;*/
-  height: 75em;
+  height: 68em;
   padding: 0;
   margin: 0;
   margin-bottom: -100px;
@@ -243,7 +243,7 @@
 .go-background {
   /*background: url('/media/home-go4.png') no-repeat center center fixed;
   background-size: cover;*/
-  height: 75em;
+  height: 68m;
   padding: 0;
   margin: 0;
   margin-bottom: -100px;
@@ -255,19 +255,19 @@
 
 /* Adds the animation to the slides*/
 #slideset-stay {
-  height: 75em; 
+  height: 68em; 
   position: relative;
   overflow: hidden;
 }
 
 #slideset-stay > *:nth-child(1) {
   position: absolute; top: 100%; left: 0;
-  animation: 12s autoplay1 infinite ease-in-out;
+  animation: 18s autoplay1 infinite ease-in-out;
 }
 
 #slideset-stay > *:nth-child(2) {
   position: absolute; top: 100%; left: 0;
-  animation: 12s autoplay2 infinite ease-in-out;
+  animation: 18s autoplay2 infinite ease-in-out;
 }
 
 #slideset-stay > *:nth-child(3) {
@@ -276,37 +276,37 @@
 }
 
 #slideset-go {
-  height: 75em; 
+  height: 68em; 
   position: relative;
   overflow: hidden;
 }
 
 #slideset-go > *:nth-child(1) {
   position: absolute; top: 100%; left: 0;
-  animation: 12s autoplay1 infinite ease-in-out;
+  animation: 18s autoplay1 infinite ease-in-out;
 }
 
 #slideset-go > *:nth-child(2) {
   position: absolute; top: 100%; left: 0;
-  animation: 12s autoplay2 infinite ease-in-out;
+  animation: 18s autoplay2 infinite ease-in-out;
 }
 
 #slideset-go > *:nth-child(3) {
   position: absolute; top: 100%; left: 0;
-  animation: 12s autoplay2 infinite ease-in-out;
+  animation: 18s autoplay2 infinite ease-in-out;
 }
 
 @keyframes autoplay1 {
-  0% {top: 0%}
-  4% {top: 0%}
+  0% {top: 100%}
+  15% {top: 0%}
   33.33% {top: 0%}
-  37.33% {top: 0%}
-  100% {top: 0%}
+  37.33% {top: -120%}
+  100% {top: -120%}
 }
 
 @keyframes autoplay2 {
   0% {top: 100%}
-  4% {top: 0%}
+  15% {top: 0%}
   33.33% {top: 0%}
   37.33% {top: -120%}
   100% {top: -120%}
@@ -346,7 +346,7 @@
 /*-------------------------------------------------------------------Icons*/
 
 .sg-icon-blocks {
-  text-align: center;
+  text-align: left;
 }
 
 .sg-icons {
@@ -567,7 +567,7 @@ input.invalid {
   background-color: #000000b3;
   height: 100%;
   color: white;
-  padding: 0 20px 0 60px;
+  padding: 0 10px 0 60px;
 }
 
 .dark-overlay2 {
