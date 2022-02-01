@@ -178,11 +178,19 @@ h2 {
   padding-right: 0;
 }
 
+/*Pre-logo changes
 #banner-logo-focus {
   max-width: 26rem;
   top: calc(100vh - 1865px);
   position: relative;
   right: 35px;
+}*/
+
+#banner-logo-focus {
+  max-width: 26rem;
+  top: 23em;
+  position: absolute;
+  left: 19.5em;
 }
 
 #banner-logo-focus {
@@ -204,11 +212,19 @@ h2 {
   }
 }
 
+/* Pre-logo changes
 #banner-logo-fade {
   max-width: 16rem;
   top: calc(100vh - 1865px);
   position: relative;
   left: 15px;
+}*/
+
+#banner-logo-fade {
+  max-width: 16rem;
+  top: 23em;
+  position: absolute;
+  margin-left: 11px;
 }
 
 #banner-logo-fade {
@@ -232,30 +248,31 @@ h2 {
 
 /*------Banner images/slides */
 
+/*
 #banner-logo-left {
   text-align: left;
 }
 
 #banner-logo-right {
   text-align: right;
-}
+}*/
 
 .stay-background {
   /*background: url('/media/home-stay4.png') no-repeat center center fixed;
   background-size: cover;*/
-  height: 75em;
+  height: 60em;
   padding: 0;
   margin: 0;
-  margin-bottom: -100px;
+ /* margin-bottom: -100px;*/
 }
 
 .go-background {
   /*background: url('/media/home-go4.png') no-repeat center center fixed;
   background-size: cover;*/
-  height: 75m;
+  height: 60em;
   padding: 0;
   margin: 0;
-  margin-bottom: -100px;
+ /* margin-bottom: -100px;*/
 }
 
 .stay-slides,
@@ -265,7 +282,7 @@ h2 {
 
 /* Adds the animation to the slides*/
 #slideset-stay {
-  height: 75em;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -288,7 +305,7 @@ h2 {
 */
 
 #slideset-go {
-  height: 75em;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -464,6 +481,102 @@ h2 {
   font-size: 3rem;
   color: #C9007F;
   margin-bottom: 1rem;
+}
+
+.sg-icon-size {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 1rem;
+  background: url('/media/campervan-size-g.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease;
+}
+
+.sg-icon-size:hover {
+  background: url('/media/campervan-size-c.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease-in-out;
+}
+
+.sg-icon-fuel {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 1rem;
+  background: url('/media/fuel-type-g.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease;
+}
+
+.sg-icon-fuel:hover {
+  background: url('/media/fuel-type-c.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease-in-out;
+}
+
+.sg-icon-sleeps {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 1rem;
+  background: url('/media/sleeps-g.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease;
+}
+
+.sg-icon-sleeps:hover {
+  background: url('/media/sleeps-c.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease-in-out;
+}
+
+.sg-icon-seats {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 1rem;
+  background: url('/media/seats-g.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease;
+}
+
+.sg-icon-seats:hover {
+  background: url('/media/seats-c.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease-in-out;
+}
+
+/* Sets icons for mobile devices*/
+
+@media only screen and (max-width: 768px) {
+  .sg-icon-size {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 1rem;
+    background: url('/media/campervan-size-c.png') no-repeat center center;
+    background-size: contain;
+  }
+
+  .sg-icon-fuel {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 1rem;
+    background: url('/media/fuel-type-c.png') no-repeat center center;
+    background-size: contain;
+  }
+
+  .sg-icon-sleeps {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 1rem;
+    background: url('/media/sleeps-c.png') no-repeat center center;
+    background-size: contain;
+  }
+
+  .sg-icon-seats {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 1rem;
+    background: url('/media/seats-c.png') no-repeat center center;
+    background-size: contain;
+  }
 }
 
 .sg-icon-text {
