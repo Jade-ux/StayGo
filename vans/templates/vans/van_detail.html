@@ -6,6 +6,104 @@
 
 {% block extra_css %}
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+<style>
+.sg-icon-size {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 1rem;
+  background: url('{{ MEDIA_URL }}campervan-size-g.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease;
+}
+
+.sg-icon-size:hover {
+  background: url('{{ MEDIA_URL }}campervan-size-c.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease-in-out;
+}
+
+.sg-icon-fuel {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 1rem;
+  background: url('{{ MEDIA_URL }}fuel-type-g.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease;
+}
+
+.sg-icon-fuel:hover {
+  background: url('{{ MEDIA_URL }}fuel-type-c.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease-in-out;
+}
+
+.sg-icon-sleeps {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 1rem;
+  background: url('{{ MEDIA_URL }}sleeps-g.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease;
+}
+
+.sg-icon-sleeps:hover {
+  background: url('{{ MEDIA_URL }}sleeps-c.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease-in-out;
+}
+
+.sg-icon-seats {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 1rem;
+  background: url('{{ MEDIA_URL }}seats-g.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease;
+}
+
+.sg-icon-seats:hover {
+  background: url('{{ MEDIA_URL }}seats-c.png') no-repeat center center;
+  background-size: contain;
+  transition: .8s ease-in-out;
+}
+
+/* Sets icons for mobile devices*/
+
+@media only screen and (max-width: 768px) {
+  .sg-icon-size {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 1rem;
+    background: url('{{ MEDIA_URL }}campervan-size-c.png') no-repeat center center;
+    background-size: contain;
+  }
+
+  .sg-icon-fuel {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 1rem;
+    background: url('{{ MEDIA_URL }}fuel-type-c.png') no-repeat center center;
+    background-size: contain;
+  }
+
+  .sg-icon-sleeps {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 1rem;
+    background: url('{{ MEDIA_URL }}sleeps-c.png') no-repeat center center;
+    background-size: contain;
+  }
+
+  .sg-icon-seats {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 1rem;
+    background: url('{{ MEDIA_URL }}seats-c.png') no-repeat center center;
+    background-size: contain;
+  }
+}
+</style>
 {% endblock %}
 
 {% block extra_js %}

@@ -483,11 +483,12 @@ h2 {
   margin-bottom: 1rem;
 }
 
+/*
 .sg-icon-size {
   height: 70px;
   width: 70px;
   margin-bottom: 1rem;
-  background: url('/media/campervan-size-g.png') no-repeat center center;
+  background: url('/{{ MEDIA_URL }}/campervan-size-g.png') no-repeat center center;
   background-size: contain;
   transition: .8s ease;
 }
@@ -543,7 +544,7 @@ h2 {
   transition: .8s ease-in-out;
 }
 
-/* Sets icons for mobile devices*/
+/* Sets icons for mobile devices
 
 @media only screen and (max-width: 768px) {
   .sg-icon-size {
@@ -577,7 +578,7 @@ h2 {
     background: url('/media/seats-c.png') no-repeat center center;
     background-size: contain;
   }
-}
+}*/
 
 .sg-icon-text {
   font-size: 1rem;
