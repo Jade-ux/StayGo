@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'booking',
     'vans',
     'profiles',
+    'faqs',
 
     # Other
     'storages'
