@@ -1062,3 +1062,20 @@ a.prev:hover {
   background-color: #fff;
   color: #C9007F;
 }
+
+
+/*---------------------------------------------------------------FAQs page*/
+
+.faqs-block {
+  background-color: #000000c7;
+  color: white;
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.faqs-text-block {
+    position: absolute;
+    top: 2em;
+    overflow-x: scroll;
+    height: 45em;
+}
