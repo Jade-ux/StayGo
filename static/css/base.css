@@ -114,6 +114,11 @@ h2 {
   margin-bottom: 2rem;
 }
 
+.page-title {
+  font-size: 10em;
+  position: fixed;
+}
+
 /*---------------------------------------------------------------Buttons*/
 
 .pink-button {
@@ -1071,6 +1076,8 @@ a.prev:hover {
   color: white;
   border-radius: 5px;
   padding: 25px;
+  overflow-x: scroll;
+  height: 45em;
 }
 
 .faqs-text-block {
@@ -1078,4 +1085,8 @@ a.prev:hover {
     top: 2em;
     overflow-x: scroll;
     height: 45em;
+}
+
+.faqs-row {
+  position: fixed;
 }
