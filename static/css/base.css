@@ -164,6 +164,19 @@ h2 {
   padding-right: 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .container-banner-home {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+
 /*.goSlides {
   position: relative;
   z-index: -1;
@@ -193,8 +206,33 @@ h2 {
   position: relative;
   /* right: calc(100vw - 68em); */
   z-index: 2000;
-  left: 19em;
+  left: 26em;
 }
+
+@media only screen and (max-width: 2000px) {
+  #banner-logo-focus {
+    left: 19em;
+  }
+}
+
+@media only screen and (max-width: 1900px) {
+  #banner-logo-focus {
+    left: 17em;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  #banner-logo-focus {
+    left: 10em;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  #banner-logo-focus {
+    left: 8em;
+  }
+}
+
 
 #banner-logo-focus {
   animation: stay-zoom 5s infinite;
