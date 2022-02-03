@@ -17,7 +17,6 @@ body {
   font-size: 0.9rem;
 }
 
-
 /*-------------------------------------------------------------Nav - Menu*/
 
 .staygo-logo-img {
@@ -703,14 +702,14 @@ footer {
 .booking-background {
   background: url('/media/book-a-campervan.png') no-repeat center center fixed;
   background-size: cover;
-  height: calc(100vh - 164px);
+  height: 70em;
   padding: 0;
   margin: 0;
   width: 100%;
 }
 
 .booking-block {
-  height: 20vh;
+  height: 15vh;
 }
 
 .booking-form {
@@ -1077,7 +1076,7 @@ a.prev:hover {
   border-radius: 5px;
   padding: 25px;
   overflow-x: scroll;
-  height: 45em;
+  height: 30em;
 }
 
 .faqs-text-block {
@@ -1089,4 +1088,9 @@ a.prev:hover {
 
 .faqs-row {
   position: fixed;
+}
+
+.faqs-paragraph {
+  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
 }
