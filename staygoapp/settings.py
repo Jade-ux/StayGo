@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'faqs',
 
     # Other
+    'crispy_forms',
     'storages'
 ]
 
@@ -66,10 +67,13 @@ MIDDLEWARE = [
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-jadeux-staygo-4idr8qvdp0y.ws-eu29.gitpod.io',
+    'https://8000-jadeux-staygo-vacko2l3jgr.ws-eu30.gitpod.io',
     'https://*.127.0.0.1',
     'http://127.0.0.1:8000/']
 
 ROOT_URLCONF = 'staygoapp.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -88,6 +92,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
@@ -195,6 +203,12 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+#Stripe
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 
 # Default primary key field type

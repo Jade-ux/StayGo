@@ -168,15 +168,16 @@ h2 {
   padding-right: 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 912px) {
   .container-banner-home {
     display: none;
   }
 }
 
-@media only screen and (min-width: 769px) {
+
+@media only screen and (min-width: 912px) {
   .mobile-only {
-    display: none;
+    display: none
   }
 }
 
@@ -1094,3 +1095,4 @@ a.prev:hover {
   font-weight: 200;
   font-family: 'Montserrat', sans-serif;
 }
+
