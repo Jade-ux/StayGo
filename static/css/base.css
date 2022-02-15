@@ -304,11 +304,12 @@ h2 {
 
 /*------Banner images/slides */
 
-/*
+
 #banner-logo-left {
-  text-align: left;
+  text-align: right;
 }
 
+/*
 #banner-logo-right {
   text-align: right;
 }
@@ -510,7 +511,7 @@ h2 {
 .stay-background-mobile {
   background: url(/media/home-stay4.png) no-repeat top right fixed;
   background-size: contain;
-  padding: 0 0 10px 0;
+  padding: 0 0 30px 0;
   margin: 0;
  /* margin-bottom: -100px;*/
 }
@@ -538,7 +539,7 @@ h2 {
 .logo-stay-mobile {
   position: relative;
   top: 70%;
-  margin-left: 4em;
+  margin-left: 3em;
 }
 
 .logo-go-mobile {
@@ -585,6 +586,13 @@ h2 {
   }
 }
 
+.date-search-mobile {
+  position: relative;
+  top: 5em;
+  width: 80%;
+  margin: auto;
+}
+
 /*------------------------------------------------------Blocks and containers*/
 
 .sg-container {
@@ -597,7 +605,6 @@ h2 {
       padding-right: 30px;
   }
 }
-
 
 .sg-container-allpages {
   margin-top: 3.8rem;

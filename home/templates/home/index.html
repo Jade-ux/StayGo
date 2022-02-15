@@ -4,7 +4,15 @@
 {% block page_header %}
 {% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+{% endblock %}
+
 {% block extra_js %}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
 
 {% endblock %}
 
@@ -52,20 +60,18 @@
 
         <!--Logo block-->
         <div class="row logo-row">
-            <div class="d-none d-lg-flex col-md-2 col-lg-3"></div>
-        <div class="col-12 col-md-8 col-lg-6">
-            <!---Stay logo-->
-            <div class="banner-logo row">
-                <div class="col-6" id="banner-logo-left">
-                    <img id="banner-logo-focus" src="{{ MEDIA_URL }}STAYGOlogo-02.png">
-                </div>
-            <!--Go logo-->
-                <div class="col-6" id="banner-logo-right">
-                    <img id="banner-logo-fade" src="{{ MEDIA_URL }}STAYGOlogo-03.png">
+            <div class="col-12">
+                <!---Stay logo-->
+                <div class="banner-logo row">
+                    <div class="col-6" id="banner-logo-left">
+                        <img id="banner-logo-focus" src="{{ MEDIA_URL }}STAYGOlogo-02.png">
+                    </div>
+                    <!--Go logo-->
+                    <div class="col-6" id="banner-logo-right">
+                        <img id="banner-logo-fade" src="{{ MEDIA_URL }}STAYGOlogo-03.png">
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="d-none d-lg-flex col-md-2 col-lg-3"></div>
         </div>
 
 
@@ -95,6 +101,17 @@
             <div class="logo-go-mobile">
                 <img id="banner-logo-go-mobile" src="{{ MEDIA_URL }}STAYGOlogo-03.png">
             </div>
+            <div class="row date-search-mobile">
+                <div class="col-12">
+                    <input type="text" class="form-control vans-dates-form-input" id="formGroupExampleInput"
+                        placeholder="Example input" name="daterange" value="02/01/2022 - 02/15/2022" />
+                </div>
+
+                <div class="mt-4 mb-4 center">
+                    <button class="pink-button" type="button">SEARCH</button>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -135,7 +152,7 @@
                     <img class="testimonial-img" src="{{ MEDIA_URL }}testimonial1.png">
                 </div>
                 <div class="col-12 col-md-9">
-                    We had an excellent trip away travelling in iris! She’s a lovely van, very well kept, with all
+                    We had an excellent trip away travelling in Starsky! It’s a lovely van, very well kept, with all
                     you need for your trip! Oakley was fantastic, lovely guy and always available to help and answer
                     questions at any point! Will certainly be using again!!
                     <div class="row">
