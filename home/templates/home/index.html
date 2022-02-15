@@ -21,6 +21,7 @@
 <!---add page content-->
 <div class="container-fluid container-banner-home">
     <div class="row">
+        <!--Stay Background-->
         <div class="col-6 stay-background">
             <div id="slideset-stay">
                 <div>
@@ -33,13 +34,8 @@
                     <img src="{{ MEDIA_URL }}home-stay6.png" class="stay-slides" alt="">
                 </div>
             </div>
-            <div class="banner-logo">
-                <div class="col-12" id="banner-logo-right">
-                    <img id="banner-logo-focus" src="{{ MEDIA_URL }}STAYGOlogo-02.png">
-                </div>
-            </div>
         </div>
-
+        <!--Go Background-->
         <div class="col-6 go-background">
             <div id="slideset-go">
                 <div>
@@ -52,12 +48,26 @@
                     <img src="{{ MEDIA_URL }}home-go3.png" class="go-slides" alt="">
                 </div>
             </div>
-            <div class="banner-logo">
-                <div class="col-12" id="banner-logo-left">
+        </div>
+
+        <!--Logo block-->
+        <div class="row logo-row">
+            <div class="d-none d-lg-flex col-md-2 col-lg-3"></div>
+        <div class="col-12 col-md-8 col-lg-6">
+            <!---Stay logo-->
+            <div class="banner-logo row">
+                <div class="col-6" id="banner-logo-left">
+                    <img id="banner-logo-focus" src="{{ MEDIA_URL }}STAYGOlogo-02.png">
+                </div>
+            <!--Go logo-->
+                <div class="col-6" id="banner-logo-right">
                     <img id="banner-logo-fade" src="{{ MEDIA_URL }}STAYGOlogo-03.png">
                 </div>
             </div>
         </div>
+            <div class="d-none d-lg-flex col-md-2 col-lg-3"></div>
+        </div>
+
 
         <!--old style
     <div class="col-6 go-background">
@@ -74,8 +84,19 @@
     </div>
 </div>
 <!--Mobile banner-->
-<div class="container-fluid sm-d-none">
-<p>mobile test</p>
+<div class="container-fluid d-md-none">
+    <div class="row banner-mobile">
+        <div class="col-12 stay-background-mobile">
+            <div class="logo-stay-mobile">
+                <img id="banner-logo-stay-mobile" src="{{ MEDIA_URL }}STAYGOlogo-02.png">
+            </div>
+        </div>
+        <div class="col-12 go-background-mobile">
+            <div class="logo-go-mobile">
+                <img id="banner-logo-go-mobile" src="{{ MEDIA_URL }}STAYGOlogo-03.png">
+            </div>
+        </div>
+    </div>
 </div>
 
 <!--Start of body content-->
@@ -84,19 +105,19 @@
         <div class="col-12">
             <h1>Why hire a van through StayGo?</h1>
         </div>
-        <div class="col-3 sg-icon-blocks">
+        <div class="col-12 col-md-6 col-lg-3 sg-icon-blocks">
             <i class="fas fa-bed sg-icons"></i>
             <p class="sg-icon-text">Lorem ipsum dolor sit amet, consectetur </p>
         </div>
-        <div class="col-3 sg-icon-blocks">
+        <div class="col-12 col-md-6 col-lg-3 sg-icon-blocks">
             <i class="fas fa-bed sg-icons"></i>
             <p class="sg-icon-text">Lorem ipsum dolor sit amet, consectetur </p>
         </div>
-        <div class="col-3 sg-icon-blocks">
+        <div class="col-12 col-md-6 col-lg-3 sg-icon-blocks">
             <i class="fas fa-bed sg-icons"></i>
             <p class="sg-icon-text">Lorem ipsum dolor sit amet, consectetur </p>
         </div>
-        <div class="col-3 sg-icon-blocks">
+        <div class="col-12 col-md-6 col-lg-3 sg-icon-blocks">
             <i class="fas fa-bed sg-icons"></i>
             <p class="sg-icon-text">Lorem ipsum dolor sit amet, consectetur </p>
         </div>

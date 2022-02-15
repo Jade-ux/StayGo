@@ -190,6 +190,12 @@ h2 {
 
 /*------Logo & animation */
 
+.logo-row {
+  position: absolute;
+  top: 23em;
+
+}
+
 .banner-logo {
   /*margin-top: 28rem;*/
   padding-left: 0;
@@ -207,23 +213,27 @@ h2 {
 
 #banner-logo-focus {
   max-width: 26rem;
-  top: -37em;
+  /*top: -37em;*/
   position: relative;
   /* right: calc(100vw - 68em); */
   z-index: 2000;
-  left: 26em;
+  /*left: 26em;*/
 }
 
 @media only screen and (max-width: 2000px) {
+  /*
   #banner-logo-focus {
     left: 19em;
   }
+  */
 }
 
 @media only screen and (max-width: 1900px) {
+  /*
   #banner-logo-focus {
     left: 17em;
   }
+  */
 }
 
 @media only screen and (max-width: 1500px) {
@@ -268,9 +278,9 @@ h2 {
 
 #banner-logo-fade {
   max-width: 16rem;
-  top: 23em;
-  position: absolute;
-  margin-left: 11px;
+  /*top: 23em;*/
+  position: relative;
+  /*margin-left: 11px;*/
 }
 
 #banner-logo-fade {
@@ -297,11 +307,12 @@ h2 {
 /*
 #banner-logo-left {
   text-align: left;
-}*/
+}
 
 #banner-logo-right {
-  text-align: center;
+  text-align: right;
 }
+*/
 
 .stay-background {
   /*background: url('/media/home-stay4.png') no-repeat center center fixed;
@@ -490,11 +501,103 @@ h2 {
 #slideset-go > *:nth-child(3) {animation-delay: 14s}
 */
 
+/*-------Mobile banner ----------*/
+
+.banner-mobile {
+  min-height: 40em;
+}
+
+.stay-background-mobile {
+  background: url(/media/home-stay4.png) no-repeat top right fixed;
+  background-size: contain;
+  padding: 0 0 10px 0;
+  margin: 0;
+ /* margin-bottom: -100px;*/
+}
+
+.go-background-mobile {
+  background: url(/media/home-go4.png) no-repeat top right fixed;
+  background-size: unset;
+  padding: 10px 0 0 0;
+  margin: 0;
+ /* margin-bottom: -100px;*/
+}
+
+#banner-logo-stay-mobile {
+  max-height: 6em;
+  z-index: 2000;
+  float: left;
+}
+
+#banner-logo-go-mobile {
+  max-height: 6em;
+  z-index: 2000;
+  float: right;
+}
+
+.logo-stay-mobile {
+  position: relative;
+  top: 70%;
+  margin-left: 4em;
+}
+
+.logo-go-mobile {
+  position: relative;
+  top: 0%;
+  margin-right: 4em;
+}
+
+#banner-logo-stay-mobile {
+  animation: stay-zoom 5s infinite;
+}
+
+@keyframes stay-zoom {
+
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+}
+
+#banner-logo-go-mobile {
+  animation: go-zoom 5s infinite;
+  animation-delay: 2.5s;
+}
+
+@keyframes go-zoom {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
 /*------------------------------------------------------Blocks and containers*/
 
 .sg-container {
   margin-top: 3em;
 }
+
+@media only screen and (max-width: 768px) {
+    .sg-container {
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+}
+
 
 .sg-container-allpages {
   margin-top: 3.8rem;
@@ -528,6 +631,12 @@ h2 {
 
 .sg-icon-blocks {
   text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+    .sg-icon-blocks {
+    text-align: center;
+  }
 }
 
 .sg-icons {
