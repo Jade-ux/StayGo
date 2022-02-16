@@ -323,6 +323,8 @@
             <div class="row dark-overlay">
                 <div class="col-12 pright-6 pt-5">
                     <h5>Pick your dates</h5>
+                    <form action="{% url 'add_to_cart' van.id %}" method="POST">
+                        {% csrf_token %}
                     <div class="form-group row mb-3 mt-4">
                         <div class="col-12 booking-form-input-col">
                             <input type="text" class="form-control vans-dates-form-input" id="formGroupExampleInput"
@@ -330,8 +332,10 @@
                         </div>
                     </div>
                     <div class="mt-4 mb-4 center">
-                        <button class="pink-button" type="button">RESERVE</button>
+                        <input type="submit" class="pink-button" value="BOOK">
                     </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </form>
                     <div class="col-12 mt-3">
                         <p><i class="fas fa-check pink"></i>
                             24/7 roadside assistance</p>

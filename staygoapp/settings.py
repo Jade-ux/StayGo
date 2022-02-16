@@ -66,8 +66,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-jadeux-staygo-4idr8qvdp0y.ws-eu29.gitpod.io',
-    'https://8000-jadeux-staygo-vacko2l3jgr.ws-eu30.gitpod.io',
+    'https://8000-jadeux-staygo-cffcctliov9.ws-eu32.gitpod.io',
     'https://*.127.0.0.1',
     'http://127.0.0.1:8000/']
 
@@ -91,6 +90,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'booking.contexts.booking_details',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -204,7 +204,10 @@ if 'USE_AWS' in os.environ:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-#Stripe
+# Global variables
+BOOKING_DEPOSIT_PERCENTAGE = 50
+
+# Stripe
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')

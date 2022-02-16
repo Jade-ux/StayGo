@@ -32,130 +32,136 @@
             <div class="row">
                 <div class="col-1"></div>
                 <div class="col-10 booking-form-block">
-                              <form class="booking-form">
-                <h3>BOOK YOUR CAMPERVAN</h3>
-                <!-- Circles to indicate the steps of the form -->
-                <div class="steps-block mb-3">
-                    <span class="step">1</span>
-                    <span class="form-line">----------------</span>
-                    <span class="step">2</span>
-                    <span class="form-line">----------------</span>
-                    <span class="step">3</span>
-                </div>
-                <!------Sign up tab------->
-                <div class="tab">
-                    <h4 class="mb-4 white">Step 1: Sign up</h4>
-                    <p class="mb-4 form-help">Already have an account? <a href="#">Please login</a></p>
-                    <div class="booking-form-inner">
-                        <div class="form-group row mb-3">
-                            <label for="formGroupExampleInput"
-                                class="col-4 col-md-3 col-form-label booking-form-label">FIRST NAME</label>
-                            <div class="col-8 col-md-9 booking-form-input-col">
-                                <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input">
+                    <form class="booking-form">
+                        <h3>BOOK YOUR CAMPERVAN</h3>
+                        <!-- Circles to indicate the steps of the form -->
+                        <div class="steps-block mb-3">
+                            <span class="step">1</span>
+                            <span class="form-line">----------------</span>
+                            <span class="step">2</span>
+                            <span class="form-line">----------------</span>
+                            <span class="step">3</span>
+                        </div>
+                        <!------Sign up tab------->
+                        <div class="tab">
+                            <h4 class="mb-4 white">Step 1: Sign up</h4>
+                            <p class="mb-4 form-help">Already have an account? <a href="#">Please login</a></p>
+                            <div class="booking-form-inner">
+                                <div class="form-group row mb-3">
+                                    <label for="formGroupExampleInput"
+                                        class="col-4 col-md-3 col-form-label booking-form-label">FIRST NAME</label>
+                                    <div class="col-8 col-md-9 booking-form-input-col">
+                                        <input type="text" class="form-control booking-form-input"
+                                            id="formGroupExampleInput" placeholder="Example input">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="formGroupExampleInput"
+                                        class="col-4 col-md-3 col-form-label booking-form-label">LAST NAME</label>
+                                    <div class="col-8 col-md-9 booking-form-input-col">
+                                        <input type="text" class="form-control booking-form-input"
+                                            id="formGroupExampleInput" placeholder="Example input">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="formGroupExampleInput"
+                                        class="col-3 col-form-label booking-form-label">EMAIL
+                                        ADDRESS</label>
+                                    <div class="col-9 booking-form-input-col">
+                                        <input type="text" class="form-control booking-form-input"
+                                            id="formGroupExampleInput" placeholder="Example input">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="formGroupExampleInput"
+                                        class="col-3 col-form-label booking-form-label">PASSWORD</label>
+                                    <div class="col-9 booking-form-input-col">
+                                        <input type="text" class="form-control booking-form-input"
+                                            id="formGroupExampleInput" placeholder="Example input">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group row mb-3">
-                            <label for="formGroupExampleInput"
-                                class="col-4 col-md-3 col-form-label booking-form-label">LAST NAME</label>
-                            <div class="col-8 col-md-9 booking-form-input-col">
-                                <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input">
+                        <!------Your trip tab------->
+                        <div class="tab">
+                            <h4 class="mb-4 white">Step 2: Tell us about your trip</h4>
+                            <div class="booking-form-inner">
+                                <div class="form-group row mb-3">
+                                    <label for="formGroupExampleInput"
+                                        class="col-4 col-md-3 col-form-label booking-form-label">DESTINATION</label>
+                                    <div class="col-8 col-md-9 booking-form-input-col">
+                                        <input type="text" class="form-control booking-form-input"
+                                            id="formGroupExampleInput" placeholder="Example input">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="formGroupExampleInput"
+                                        class="col-4 col-md-3 col-form-label booking-form-label">NUMBER OF
+                                        PEOPLE</label>
+                                    <div class="col-8 col-md-9 booking-form-input-col">
+                                        <input type="text" class="form-control booking-form-input"
+                                            id="formGroupExampleInput" placeholder="Example input">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="formGroupExampleInput"
+                                        class="col-3 col-form-label booking-form-label">DATES</label>
+                                    <div class="col-9 booking-form-input-col">
+                                        <input type="text" class="form-control booking-form-input"
+                                            id="formGroupExampleInput" placeholder="Example input" name="daterange"
+                                            value="01/01/2018 - 01/15/2018" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group row mb-3">
-                            <label for="formGroupExampleInput" class="col-3 col-form-label booking-form-label">EMAIL
-                                ADDRESS</label>
-                            <div class="col-9 booking-form-input-col">
-                                <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input">
+                        <!------Last step------->
+                        <div class="tab">
+                            <h4 class="mb-4 white">Step 2: Tell us about your trip</h4>
+                            <div class="booking-form-inner">
+                                <div class="form-group row mb-3">
+                                    <label for="formGroupExampleInput"
+                                        class="col-4 col-md-3 col-form-label booking-form-label">FIRST NAME</label>
+                                    <div class="col-8 col-md-9 booking-form-input-col">
+                                        <input type="text" class="form-control booking-form-input"
+                                            id="formGroupExampleInput" placeholder="Example input">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="formGroupExampleInput"
+                                        class="col-4 col-md-3 col-form-label booking-form-label">LAST NAME</label>
+                                    <div class="col-8 col-md-9 booking-form-input-col">
+                                        <input type="text" class="form-control booking-form-input"
+                                            id="formGroupExampleInput" placeholder="Example input">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="formGroupExampleInput"
+                                        class="col-3 col-form-label booking-form-label">EMAIL
+                                        ADDRESS</label>
+                                    <div class="col-9 booking-form-input-col">
+                                        <input type="text" class="form-control booking-form-input"
+                                            id="formGroupExampleInput" placeholder="Example input">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <label for="formGroupExampleInput"
+                                        class="col-3 col-form-label booking-form-label">PASSWORD</label>
+                                    <div class="col-9 booking-form-input-col">
+                                        <input type="text" class="form-control booking-form-input"
+                                            id="formGroupExampleInput" placeholder="Example input">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group row mb-3">
-                            <label for="formGroupExampleInput"
-                                class="col-3 col-form-label booking-form-label">PASSWORD</label>
-                            <div class="col-9 booking-form-input-col">
-                                <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input">
+                        <div style="overflow:auto;">
+                            <div style="float:right;">
+                                <button class="pink-button" type="button" id="prevBtn"
+                                    onclick="nextPrev(-1)">Previous</button>
+                                <button class="pink-button" type="button" id="nextBtn"
+                                    onclick="nextPrev(1)">Next</button>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!------Your trip tab------->
-                <div class="tab">
-                    <h4 class="mb-4 white">Step 2: Tell us about your trip</h4>
-                    <div class="booking-form-inner">
-                        <div class="form-group row mb-3">
-                            <label for="formGroupExampleInput"
-                                class="col-4 col-md-3 col-form-label booking-form-label">DESTINATION</label>
-                            <div class="col-8 col-md-9 booking-form-input-col">
-                                <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input">
-                            </div>
-                        </div>
-                        <div class="form-group row mb-3">
-                            <label for="formGroupExampleInput"
-                                class="col-4 col-md-3 col-form-label booking-form-label">NUMBER OF PEOPLE</label>
-                            <div class="col-8 col-md-9 booking-form-input-col">
-                                <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input">
-                            </div>
-                        </div>
-                        <div class="form-group row mb-3">
-                            <label for="formGroupExampleInput"
-                                class="col-3 col-form-label booking-form-label">DATES</label>
-                            <div class="col-9 booking-form-input-col">
-                                <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input" name="daterange" value="01/01/2018 - 01/15/2018" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!------Last step------->
-                <div class="tab">
-                    <h4 class="mb-4 white">Step 2: Tell us about your trip</h4>
-                    <div class="booking-form-inner">
-                        <div class="form-group row mb-3">
-                            <label for="formGroupExampleInput"
-                                class="col-4 col-md-3 col-form-label booking-form-label">FIRST NAME</label>
-                            <div class="col-8 col-md-9 booking-form-input-col">
-                                <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input">
-                            </div>
-                        </div>
-                        <div class="form-group row mb-3">
-                            <label for="formGroupExampleInput"
-                                class="col-4 col-md-3 col-form-label booking-form-label">LAST NAME</label>
-                            <div class="col-8 col-md-9 booking-form-input-col">
-                                <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input">
-                            </div>
-                        </div>
-                        <div class="form-group row mb-3">
-                            <label for="formGroupExampleInput" class="col-3 col-form-label booking-form-label">EMAIL
-                                ADDRESS</label>
-                            <div class="col-9 booking-form-input-col">
-                                <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input">
-                            </div>
-                        </div>
-                        <div class="form-group row mb-3">
-                            <label for="formGroupExampleInput"
-                                class="col-3 col-form-label booking-form-label">PASSWORD</label>
-                            <div class="col-9 booking-form-input-col">
-                                <input type="text" class="form-control booking-form-input" id="formGroupExampleInput"
-                                    placeholder="Example input">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="overflow:auto;">
-                    <div style="float:right;">
-                        <button class="pink-button" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                        <button class="pink-button" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-                    </div>
-                </div>
-            </form>  
+                    </form>
                 </div>
                 <div class="col-1"></div>
             </div>
