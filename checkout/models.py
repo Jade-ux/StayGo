@@ -26,6 +26,7 @@ class BookingOrder(models.Model):
     number_of_people = models.IntegerField(null=False, default=0)
     number_of_days = models.IntegerField(null=False, default=0)
     # Edit options
+    date_range = models.CharField(max_length=100, null=True, blank=True)
     date_from = models.DateTimeField(editable=True)
     date_to = models.DateTimeField(editable=True)
     total = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)

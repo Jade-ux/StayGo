@@ -1,5 +1,5 @@
 from datetime import datetime
-from django.shortcuts import render, get_object_or_404,redirect
+from django.shortcuts import render, get_object_or_404
 
 
 from vans.models import Van
@@ -9,6 +9,11 @@ def booking(request):
     """This view returns the booking form page"""
 
     return render(request, 'booking/booking.html')
+
+def bookstarsky(request):
+    """This view returns the booking form page"""
+
+    return render(request, 'booking/book_starsky.html')
 
 
 def add_to_cart(request, item_id):
