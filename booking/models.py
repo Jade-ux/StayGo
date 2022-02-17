@@ -7,6 +7,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from vans.models import Van
+from djreservation.views import SimpleProductReservation
 
 
 class Booking(models.Model):
@@ -24,3 +25,10 @@ class Booking(models.Model):
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+
+
+class RoomReservation(SimpleProductReservation):
+    base_model = Van     # required
+    amount_field = 'quantity'  # required
+    max_amount_field = 'max_amount' # required
+    extra_display_field = []  # not required
