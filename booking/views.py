@@ -30,7 +30,7 @@ def add_to_cart(request, item_id):
     # Puts the van into the cart with the date from and date to
     # If the van exists in the cart already, it will be overwritten
     # with the new dates
-    cart[item_id] = (date_from.isoformat(), date_to.isoformat())
+    # cart[item_id] = (date_from.isoformat(), date_to.isoformat())
 
     # Updates the cart with the new details
     request.session['cart'] = cart

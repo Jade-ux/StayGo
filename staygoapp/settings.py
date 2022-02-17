@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'vans',
     'profiles',
     'faqs',
+    'checkout',
 
     # Other
     'crispy_forms',
@@ -66,7 +67,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-jadeux-staygo-cffcctliov9.ws-eu32.gitpod.io',
+    'https://8000-jadeux-staygo-x12oj01ff4y.ws-eu32.gitpod.io',
     'https://*.127.0.0.1',
     'http://127.0.0.1:8000/']
 
@@ -118,7 +119,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/booking/'
 
 WSGI_APPLICATION = 'staygoapp.wsgi.application'
 

@@ -81,8 +81,14 @@
                             <a class="nav-link" aria-current="page" href="#">CONTACT US</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">CREATE AN ACCOUNT</a>
+                            <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-user-hair white"></i> YOUR ACCOUNT</a>
                         </li>
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'account_logout' %}">LOG OUT</a></li>
+                        {% else %}
+                        <li><a href="{% url 'account_login' %}">Sign In</a></li>
+                        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
