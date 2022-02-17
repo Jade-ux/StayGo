@@ -23,14 +23,27 @@ class BookingOrder(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     # Booking details
     destination = models.EmailField(max_length=254, null=False, blank=False)
-    number_of_people = models.IntegerField(max_digits=3, null=False, default=0)
-    number_of_days = models.IntegerField(max_digits=6, null=False, default=0)
+    number_of_people = models.IntegerField(null=False, default=0)
+    number_of_days = models.IntegerField(null=False, default=0)
     # Edit options
-    date_from = models.DateTimeField(auto_now_add=True)
-    date_to = models.DateTimeField(auto_now_add=True)
+    date_from = models.DateTimeField(editable=True)
+    date_to = models.DateTimeField(editable=True)
     total = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     deposit = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     total_paid = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     total_due = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     # original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+
+    def _generate_order_number(self):
+        """
+        Generate a random, unique order number using UUID
+        """
+        return uuid.uuid4().hex.upper()
+
+    #
+    #def update_total_due(self): 
+        """
+        Updates the total due when customer pays the deposit and balance
+        """
+        # self.total_due = self.grand_total.aggregate(Sum(''))
