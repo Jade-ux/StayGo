@@ -67,7 +67,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-jadeux-staygo-x12oj01ff4y.ws-eu32.gitpod.io',
+    'https://8000-jadeux-staygo-0u86kebjv8w.ws-eu32.gitpod.io',
     'https://*.127.0.0.1',
     'http://127.0.0.1:8000/']
 

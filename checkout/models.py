@@ -42,7 +42,19 @@ class BookingOrder(models.Model):
         """
         return uuid.uuid4().hex.upper()
 
-    #
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the order number
+        if it hasn't been set already.
+        """
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
+        super().save(*args, **kwargs)
+    
+    def __str__(self):
+        return self.order_number
+
+    # Add update total Nr 35
     #def update_total_due(self): 
         """
         Updates the total due when customer pays the deposit and balance
